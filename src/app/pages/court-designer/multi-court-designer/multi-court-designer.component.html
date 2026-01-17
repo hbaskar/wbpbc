@@ -1,0 +1,74 @@
+<div class="court-designer-wrapper">
+  <div class="designer-header">
+    <h1 class="designer-title">Multi-Court Designer</h1>
+    <p class="designer-subtitle">Design a combined court featuring both pickleball and basketball elements with separate line controls.</p>
+  </div>
+  
+  <div class="court-designer-container">
+    <div class="designer-controls">
+    <div class="color-picker-group">
+      <h3>Main Court:</h3>
+
+      <app-color-picker
+        [options]="mainCourtColorOptions"
+        [selectedValue]="mainCourtColor()"
+        label="Main Court Color:"
+        zone="main-court-color"
+        (valueChange)="onMainCourtColorChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="kitchenColorOptions"
+        [selectedValue]="kitchenColor()"
+        label="Kitchen Color:"
+        zone="kitchen-color"
+        (valueChange)="onKitchenColorChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="borderColorOptions"
+        [selectedValue]="borderColor()"
+        label="Border Color:"
+        zone="border-color"
+        (valueChange)="onBorderColorChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="lineColorOptions"
+        [selectedValue]="pickleballLineColor()"
+        label="Pickleball Lines Color:"
+        zone="pickleball-lines-color"
+        (valueChange)="onPickleballLineColorChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="lineColorOptions"
+        [selectedValue]="basketballLineColor()"
+        label="Basketball Lines Color:"
+        zone="basketball-lines-color"
+        (valueChange)="onBasketballLineColorChange($event)"
+      ></app-color-picker>
+    </div>
+  </div>
+
+  <div class="court-visualization">
+    <svg #courtSvg viewBox="0 0 800 400" class="court-svg">
+      <rect class="border-surface" x="10" y="10" width="780" height="380" fill="#47614c" stroke="none"></rect>
+
+      <rect class="court-surface pickleball-line" x="60" y="60" width="680" height="280" fill="#44584c" stroke="#ffffff" stroke-width="4"></rect>
+
+      <rect class="kitchen-surface pickleball-line" x="291" y="60" width="216" height="280" fill="#2f4861" stroke="#ffffff" stroke-width="4"></rect>
+
+      <line class="pickleball-line" x1="60" y1="60" x2="740" y2="60" stroke="#ffffff" stroke-width="4"></line>
+      <line class="pickleball-line" x1="60" y1="200" x2="291" y2="200" stroke="#ffffff" stroke-width="4"></line>
+      <line class="pickleball-line" x1="507" y1="200" x2="740" y2="200" stroke="#ffffff" stroke-width="4"></line>
+      <line class="pickleball-line" x1="60" y1="340" x2="740" y2="340" stroke="#ffffff" stroke-width="4"></line>
+      <line class="pickleball-line" x1="400" y1="60" x2="400" y2="340" stroke="#ffffff" stroke-width="4"></line>
+
+      <path class="basketball-line" d="M 90 390 A 245 243 0 0 1 710 390" fill="none" stroke="#ffffff" stroke-width="4"></path>
+      <line class="basketball-line" x1="415" y1="150" x2="385" y2="150" stroke="#ffffff" stroke-width="4"></line>
+    </svg>
+  </div>
+  </div>
+</div>
+

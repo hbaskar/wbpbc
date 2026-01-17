@@ -1,0 +1,160 @@
+<!-- Portfolio Tabs Section -->
+<section class="portfolio-tabs-section">
+  <div class="portfolio-tabs-container">
+    <h1 class="portfolio-title">{{ contentService.getPortfolioHeader().title }}</h1>
+    <div class="portfolio-tabs">
+      <button
+        class="portfolio-tab"
+        [class.active]="activeTab() === 'images'"
+        (click)="setActiveTab('images')"
+        type="button"
+      >
+        Images
+      </button>
+      <button
+        class="portfolio-tab"
+        [class.active]="activeTab() === 'videos'"
+        (click)="setActiveTab('videos')"
+        type="button"
+      >
+        Videos
+      </button>
+    </div>
+
+    <!-- Images Tab Content -->
+    @if (activeTab() === 'images') {
+      <div class="portfolio-gallery">
+        <div class="portfolio-gallery-grid">
+          @for (image of contentService.getPortfolioImages(); track $index; let i = $index) {
+            <div class="portfolio-gallery-item" (click)="openLightbox(i)">
+              <img
+                [src]="image"
+                [alt]="'Portfolio image ' + (i + 1)"
+                class="portfolio-gallery-image"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Videos Tab Content -->
+    @if (activeTab() === 'videos') {
+      <div class="portfolio-videos">
+        <div class="portfolio-videos-grid">
+          @for (video of contentService.getPortfolioVideos(); track $index) {
+            <div class="portfolio-video-item">
+              <video
+                [src]="video"
+                controls
+                class="portfolio-video"
+                controlsList="nodownload"
+              ></video>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+@if (lightboxOpen()) {
+  <div class="lightbox-overlay" (click)="closeLightbox()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox">
+        ×
+      </button>
+      <button class="lightbox-nav lightbox-prev" (click)="prevLightboxImage()" aria-label="Previous image">
+        ‹
+      </button>
+      <div class="lightbox-image-container">
+        <img
+          [src]="contentService.getPortfolioImages()[lightboxImageIndex()]"
+          [alt]="'Portfolio image ' + (lightboxImageIndex() + 1)"
+          class="lightbox-image"
+        />
+      </div>
+      <button class="lightbox-nav lightbox-next" (click)="nextLightboxImage()" aria-label="Next image">
+        ›
+      </button>
+      <div class="lightbox-actions">
+        <button class="lightbox-action-btn" (click)="downloadImage()" aria-label="Download image">
+          <span>⬇</span> Download
+        </button>
+        <button class="lightbox-action-btn" (click)="shareImage()" aria-label="Share image">
+          <span>🔗</span> Share
+        </button>
+      </div>
+      <div class="lightbox-counter">
+        {{ lightboxImageIndex() + 1 }} / {{ contentService.getPortfolioImages().length }}
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Accordion Section -->
+<section class="portfolio-accordion-section">
+  <div class="portfolio-accordion-container">
+    <h2 class="portfolio-accordion-title">{{ contentService.getPortfolioStats().title }}</h2>
+    <div class="portfolio-accordion">
+      @for (item of contentService.getPortfolioAccordion(); track $index; let i = $index) {
+        <details class="portfolio-accordion-item" [open]="i === 0">
+          <summary class="portfolio-accordion-question">
+            <span class="portfolio-accordion-question-text">{{ item.question }}</span>
+            <span class="portfolio-accordion-icon">
+              <svg class="portfolio-icon-open" width="12" height="12" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true">
+                <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path>
+              </svg>
+              <svg class="portfolio-icon-closed" width="12" height="12" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true">
+                <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="portfolio-accordion-answer" [innerHTML]="(item.answer | nl2br)"></div>
+        </details>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="portfolio-stats-section">
+  <div class="portfolio-stats-container">
+    <div class="portfolio-stats-grid">
+      <div class="portfolio-stat-card">
+        <h3 class="portfolio-stat-label">{{ contentService.getPortfolioStats().people.label }}</h3>
+        <div class="portfolio-stat-value">
+          <span class="portfolio-stat-number">{{ contentService.getPortfolioStats().people.value }}</span>
+          <span class="portfolio-stat-suffix">{{ contentService.getPortfolioStats().people.suffix }}</span>
+        </div>
+        <p class="portfolio-stat-title">{{ contentService.getPortfolioStats().people.title }}</p>
+      </div>
+      <div class="portfolio-stat-card">
+        <h3 class="portfolio-stat-label">{{ contentService.getPortfolioStats().courts.label }}</h3>
+        <div class="portfolio-stat-value">
+          <span class="portfolio-stat-number">{{ contentService.getPortfolioStats().courts.value }}</span>
+          <span class="portfolio-stat-suffix">{{ contentService.getPortfolioStats().courts.suffix }}</span>
+        </div>
+        <p class="portfolio-stat-title">{{ contentService.getPortfolioStats().courts.title }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted By Section -->
+<section class="portfolio-trusted-section">
+  <div class="portfolio-trusted-container">
+    <h2 class="portfolio-trusted-title">Trusted by</h2>
+    <div class="portfolio-trusted-logos">
+      @for (logo of contentService.getClientsList(); track $index) {
+        <div class="portfolio-trusted-logo">
+          <img [src]="logo" [alt]="'Client ' + ($index + 1)" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+

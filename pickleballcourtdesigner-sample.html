@@ -1,0 +1,359 @@
+<div class="elementor-element elementor-element-590d7c5 elementor-widget elementor-widget-html" data-id="590d7c5" data-element_type="widget" data-widget_type="html.default">
+					
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pickleball Court Designer (Fixed)</title>
+    <style>
+      .court-designer-container {
+        display: flex;
+        gap: 24px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        margin: 0 auto;
+        border-radius: 10px;
+        align-items: flex-start;
+      }
+  
+      .designer-controls {
+        width: 400px;
+        padding: 12px;
+        background: #ffffff;
+        border-radius: 15px; /* Updated border-radius */
+        border: 1px solid #eee;
+        box-shadow: 0px 4px 8px #00000040; /* Added box shadow */
+      }
+  
+      .designer-controls h3 {
+        margin: 6px 0 12px;
+        font-size: 22px;
+        color: black;
+        font-family: Open Sans;
+        font-weight: 700;
+        font-style: italic;
+        line-height: 34px;
+      }
+  
+      .color-picker-group { display: block; }
+  
+      .color-option { margin-bottom: 14px; }
+  
+      .color-option label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 700;
+        color: #222;
+      }
+  
+      .custom-select {
+        position: relative;
+        width: 100%;
+        border-radius: 6px;
+        overflow: visible;
+      }
+  
+      .selected-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #ddd;
+      }
+  
+      .selected-option .title { font-weight: 700; }
+      .selected-option .arrow { opacity: 0.9; }
+  
+      .custom-options {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        z-index: 60;
+        max-height: 260px;
+        overflow: auto;
+      }
+  
+      .custom-select.open .custom-options { display: block; }
+  
+      .option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        cursor: pointer;
+        color: #fff;
+        font-weight: 600;
+      }
+  
+      .option:hover { opacity: 0.9; }
+  
+      .swatch {
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        flex: 0 0 22px;
+      }
+  
+      /* court visualization */
+      .court-visualization {
+        flex: 1;
+        /*min-width: 420px;*/
+        /*max-width: 820px;*/
+        height: 420px;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px #00000040; /* added box shadow */
+      }
+  
+      svg { width: 100%; height: 100%; display: block; }
+  
+      .court-line { stroke-width: 4; }
+  
+      .court-label {
+        font-size: 20px;
+        font-weight: 700;
+        fill: white;
+      }
+  
+      /* ensure text color readable on light swatches */
+      .option[data-value="#ffffff"],
+      .option[data-value="#d2b48c"],
+      .option[data-value="#74767a"] {
+        color: #000;
+      }
+  
+      /* ✅ Responsive Styling */
+      @media (max-width: 992px) {
+        .court-designer-container {
+          flex-direction: column;
+          align-items: center;
+        }
+  
+        .designer-controls {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+  
+        .court-visualization {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+  
+      @media (max-width: 400px) {
+        .designer-controls h3 {
+          font-size: 18px;
+        }
+         .court-designer-container {
+        display: flex;
+        gap: 0px;
+  
+      }
+  
+        .court-label {
+          font-size: 16px;
+        }
+   
+        }
+      
+    </style>
+  
+  
+    <div class="court-designer-container">
+      <div class="designer-controls">
+        <div class="color-picker-group">
+          <h3>Court Surface Colors</h3>
+  
+          <!-- Main Court -->
+          <div class="color-option">
+            <label>Main Court:</label>
+            <div class="custom-select" data-zone="court-surface">
+              <div class="selected-option" data-value="#47614c" style="background:#47614c; color:#fff;">
+                <span class="title">Tournament Green</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="custom-options">
+                <div class="option" data-value="#284d80" style="background:#284d80"><div class="swatch" style="background:#284d80"></div>Kansas City Blue</div>
+                <div class="option" data-value="#44584c" style="background:#44584c"><div class="swatch" style="background:#44584c"></div>Dark Green</div>
+                <div class="option" data-value="#47614c" style="background:#47614c"><div class="swatch" style="background:#47614c"></div>Tournament Green</div>
+                <div class="option" data-value="#2f4861" style="background:#2f4861"><div class="swatch" style="background:#2f4861"></div>Tournament Blue</div>
+                <div class="option" data-value="#74767a" style="background:#74767a; color:#000"><div class="swatch" style="background:#74767a"></div>Light Gray</div>
+                <div class="option" data-value="#4a9cad" style="background:#4a9cad"><div class="swatch" style="background:#4a9cad"></div>Oasis Blue</div>
+                <div class="option" data-value="#111" style="background:#111"><div class="swatch" style="background:#111"></div>Black</div>
+                <div class="option" data-value="#b33132" style="background:#b33132"><div class="swatch" style="background:#b33132"></div>Red</div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Kitchen -->
+          <div class="color-option">
+            <label>Kitchen:</label>
+            <div class="custom-select" data-zone="kitchen-surface">
+              <div class="selected-option" data-value="#284d80" style="background:#284d80; color:#fff;">
+                <span class="title">Kansas City Blue</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="custom-options">
+                <div class="option" data-value="#284d80" style="background:#284d80"><div class="swatch" style="background:#284d80"></div>Kansas City Blue</div>
+                <div class="option" data-value="#47614c" style="background:#47614c"><div class="swatch" style="background:#47614c"></div>Tournament Green</div>
+                <div class="option" data-value="#2f4861" style="background:#2f4861"><div class="swatch" style="background:#2f4861"></div>Tournament Blue</div>
+                <div class="option" data-value="#74767a" style="background:#74767a; color:#000"><div class="swatch" style="background:#74767a"></div>Light Gray</div>
+                <div class="option" data-value="#4a9cad" style="background:#4a9cad"><div class="swatch" style="background:#4a9cad"></div>Oasis Blue</div>
+                <div class="option" data-value="#111" style="background:#111"><div class="swatch" style="background:#111"></div>Black</div>
+                <div class="option" data-value="#b33132" style="background:#b33132"><div class="swatch" style="background:#b33132"></div>Red</div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Border -->
+          <div class="color-option">
+            <label>Border:</label>
+            <div class="custom-select" data-zone="border-surface">
+              <div class="selected-option" data-value="#44584c" style="background:#44584c; color:#fff;">
+                <span class="title">Dark Green</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="custom-options">
+                <div class="option" data-value="#284d80" style="background:#284d80"><div class="swatch" style="background:#284d80"></div>Kansas City Blue</div>
+                <div class="option" data-value="#44584c" style="background:#44584c"><div class="swatch" style="background:#44584c"></div>Dark Green</div>
+                <div class="option" data-value="#47614c" style="background:#47614c"><div class="swatch" style="background:#47614c"></div>Tournament Green</div>
+                <div class="option" data-value="#2f4861" style="background:#2f4861"><div class="swatch" style="background:#2f4861"></div>Tournament Blue</div>
+                <div class="option" data-value="#74767a" style="background:#74767a; color:#000"><div class="swatch" style="background:#74767a"></div>Light Gray</div>
+                <div class="option" data-value="#4a9cad" style="background:#4a9cad"><div class="swatch" style="background:#4a9cad"></div>Oasis Blue</div>
+                <div class="option" data-value="#111" style="background:#111"><div class="swatch" style="background:#111"></div>Black</div>
+                <div class="option" data-value="#b33132" style="background:#b33132"><div class="swatch" style="background:#b33132"></div>Red</div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Line Color -->
+          <div class="color-option">
+            <label>Line Color:</label>
+            <div class="custom-select" data-zone="line-color">
+              <div class="selected-option" data-value="#ffffff" style="background:#ffffff; color:#000;">
+                <span class="title">White (Recommended)</span>
+                <span class="arrow">▼</span>
+              </div>
+              <div class="custom-options">
+                <div class="option" data-value="#ffffff" style="background:#ffffff; color:#000"><div class="swatch" style="background:#ffffff"></div>White (Recommended)</div>
+                <div class="option" data-value="#000000" style="background:#000000"><div class="swatch" style="background:#000"></div>Black</div>
+                <!--<div class="option" data-value="#d2b48c" style="background:#d2b48c; color:#000"><div class="swatch" style="background:#d2b48c"></div>Tan</div>-->
+                <div class="option" data-value="#808080" style="background:#808080"><div class="swatch" style="background:#808080"></div>Grey</div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="court-visualization">
+        <svg viewBox="0 0 800 400" class="court-svg" aria-hidden="false" role="img">
+          <!-- Border -->
+          <rect id="border-surface" x="10" y="10" width="780" height="380" fill="#44584c"></rect>
+          <!-- Court Surface -->
+          <rect id="court-surface" x="60" y="60" width="680" height="280" fill="#47614c"></rect>
+          <!-- Kitchen -->
+          <rect id="kitchen-surface" x="291" y="60" width="216" height="280" fill="#284d80"></rect>
+          <!-- Kitchen Left Border -->
+          <line class="court-line" x1="291" y1="60" x2="291" y2="340" stroke="#ffffff"></line>
+          <!-- Kitchen Right Border -->
+          <line class="court-line" x1="507" y1="60" x2="507" y2="340" stroke="#ffffff"></line>
+  
+          <!-- Court Lines -->
+          <line class="court-line" x1="60" y1="60" x2="740" y2="60" stroke="#ffffff"></line>
+          <line class="court-line" x1="60" y1="200" x2="291" y2="200" stroke="#ffffff"></line>
+          <line class="court-line" x1="507" y1="200" x2="740" y2="200" stroke="#ffffff"></line>
+          <line class="court-line" x1="60" y1="340" x2="740" y2="340" stroke="#ffffff"></line>
+          <line class="court-line" x1="400" y1="60" x2="400" y2="340" stroke="#ffffff"></line>
+          <line class="court-line" x1="60" y1="60" x2="60" y2="340" stroke="#ffffff"></line>
+          <line class="court-line" x1="740" y1="60" x2="740" y2="340" stroke="#ffffff"></line>
+  
+          <text x="25" y="375" class="court-label">WE BUILD PICKLE BALL COURTS</text>
+        </svg>
+      </div>
+    </div>
+  
+    <script>
+      // Robust dropdown logic with checks
+      document.querySelectorAll('.custom-select').forEach(select => {
+        const optionsBox = select.querySelector('.custom-options');
+        const selectedOption = select.querySelector('.selected-option');
+  
+        if (!optionsBox || !selectedOption) return; // safety
+  
+        // open/close
+        selectedOption.addEventListener('click', e => {
+          e.stopPropagation();
+          // close others
+          document.querySelectorAll('.custom-select').forEach(s => {
+            if (s !== select) s.classList.remove('open');
+          });
+          select.classList.toggle('open');
+        });
+  
+        // option click
+        select.querySelectorAll('.option').forEach(opt => {
+          opt.addEventListener('click', e => {
+            e.stopPropagation();
+            const color = opt.getAttribute('data-value');
+            const colorName = opt.textContent.trim();
+  
+            // update header style/text
+            selectedOption.style.background = color;
+            // readable text color for light backgrounds
+            if (color === '#ffffff' || color === '#d2b48c' || color === '#74767a') {
+              selectedOption.style.color = '#000';
+            } else {
+              selectedOption.style.color = '#fff';
+            }
+            const titleSpan = selectedOption.querySelector('.title');
+            if (titleSpan) titleSpan.textContent = colorName;
+  
+            // apply to svg zone
+            const zone = select.getAttribute('data-zone');
+            if (zone === 'court-surface') {
+              const el = document.getElementById('court-surface');
+              if (el) el.setAttribute('fill', color);
+            } else if (zone === 'kitchen-surface') {
+              const el = document.getElementById('kitchen-surface');
+              if (el) el.setAttribute('fill', color);
+            } else if (zone === 'border-surface') {
+              const el = document.getElementById('border-surface');
+              if (el) el.setAttribute('fill', color);
+            } else if (zone === 'line-color') {
+              document.querySelectorAll('.court-line').forEach(line => {
+                line.setAttribute('stroke', color);
+              });
+            }
+  
+            // close this dropdown
+            select.classList.remove('open');
+          });
+        });
+      });
+  
+      // click outside closes all
+      window.addEventListener('click', () => {
+        document.querySelectorAll('.custom-select').forEach(s => s.classList.remove('open'));
+      });
+  
+      // prevent scroll inside dropdown from closing it unintentionally (optional)
+      document.querySelectorAll('.custom-options').forEach(menu => {
+        menu.addEventListener('click', e => e.stopPropagation());
+      });
+    </script>
+  
+  
+                  </div>

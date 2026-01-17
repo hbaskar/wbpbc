@@ -1,0 +1,73 @@
+<div class="court-designer-wrapper">
+  <div class="designer-header">
+    <h1 class="designer-title">Pickleball Court Designer</h1>
+    <p class="designer-subtitle">Customize your pickleball court with different surface colors, kitchen, border, and line options.</p>
+  </div>
+  
+  <div class="court-designer-container">
+    <div class="designer-controls">
+    <div class="color-picker-group">
+      <h3>Court Surface Colors</h3>
+
+      <app-color-picker
+        [options]="surfaceColorOptions"
+        [selectedValue]="courtSurfaceColor()"
+        label="Main Court:"
+        zone="court-surface"
+        (valueChange)="onCourtSurfaceChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="surfaceColorOptions"
+        [selectedValue]="kitchenColor()"
+        label="Kitchen:"
+        zone="kitchen-surface"
+        (valueChange)="onKitchenChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="surfaceColorOptions"
+        [selectedValue]="borderColor()"
+        label="Border:"
+        zone="border-surface"
+        (valueChange)="onBorderChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="lineColorOptions"
+        [selectedValue]="lineColor()"
+        label="Line Color:"
+        zone="line-color"
+        (valueChange)="onLineColorChange($event)"
+      ></app-color-picker>
+    </div>
+  </div>
+
+  <div class="court-visualization">
+    <svg #courtSvg viewBox="0 0 800 400" class="court-svg" aria-hidden="false" role="img">
+      <!-- Border -->
+      <rect id="border-surface" x="10" y="10" width="780" height="380" fill="#44584c"></rect>
+      <!-- Court Surface -->
+      <rect id="court-surface" x="60" y="60" width="680" height="280" fill="#47614c"></rect>
+      <!-- Kitchen -->
+      <rect id="kitchen-surface" x="291" y="60" width="216" height="280" fill="#284d80"></rect>
+      <!-- Kitchen Left Border -->
+      <line class="court-line" x1="291" y1="60" x2="291" y2="340" stroke="#ffffff"></line>
+      <!-- Kitchen Right Border -->
+      <line class="court-line" x1="507" y1="60" x2="507" y2="340" stroke="#ffffff"></line>
+
+      <!-- Court Lines -->
+      <line class="court-line" x1="60" y1="60" x2="740" y2="60" stroke="#ffffff"></line>
+      <line class="court-line" x1="60" y1="200" x2="291" y2="200" stroke="#ffffff"></line>
+      <line class="court-line" x1="507" y1="200" x2="740" y2="200" stroke="#ffffff"></line>
+      <line class="court-line" x1="60" y1="340" x2="740" y2="340" stroke="#ffffff"></line>
+      <line class="court-line" x1="400" y1="60" x2="400" y2="340" stroke="#ffffff"></line>
+      <line class="court-line" x1="60" y1="60" x2="60" y2="340" stroke="#ffffff"></line>
+      <line class="court-line" x1="740" y1="60" x2="740" y2="340" stroke="#ffffff"></line>
+
+      <text x="25" y="375" class="court-label">WE BUILD PICKLE BALL COURTS</text>
+    </svg>
+  </div>
+  </div>
+</div>
+

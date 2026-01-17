@@ -1,0 +1,347 @@
+@use '../../../styles/variables.scss' as *;
+
+// Main Content Section with Sidebar
+.faq-main-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-white;
+}
+
+.faq-main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: $spacing-3xl;
+  align-items: start;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+// Blog Links Sidebar
+.faq-sidebar {
+  position: sticky;
+  top: $spacing-xl;
+
+  @media (max-width: $breakpoint-lg) {
+    position: static;
+  }
+}
+
+.faq-blogs-section {
+  background: $background-light;
+  border-radius: $border-radius-lg;
+  padding: $spacing-xl;
+}
+
+.faq-blogs-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.faq-blog-card {
+  background: $background-white;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.faq-blog-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.faq-blog-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: $background-light;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-base;
+  }
+
+  .faq-blog-card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.faq-blog-content {
+  padding: $spacing-lg;
+}
+
+.faq-blog-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-sm;
+  line-height: 1.3;
+}
+
+.faq-blog-date {
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  margin-bottom: $spacing-md;
+}
+
+.faq-blog-read-more {
+  display: inline-block;
+  font-size: $font-size-base;
+  color: $accent-color;
+  font-weight: $font-weight-medium;
+  transition: color $transition-base;
+
+  .faq-blog-card:hover & {
+    color: $hover-color;
+  }
+}
+
+// FAQ Accordion Section (Main Content)
+.faq-accordion-section {
+  // No additional padding needed as it's inside faq-main-section
+}
+
+.faq-accordion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-accordion-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-3xl;
+  text-align: center;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.faq-item {
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  background: $background-white;
+  transition: all $transition-base;
+
+  &[open] {
+    border-color: #72fd02;
+    box-shadow: 0 2px 8px rgba(114, 253, 2, 0.1);
+
+    .faq-question {
+      background: rgba(114, 253, 2, 0.05);
+    }
+  }
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-lg;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  list-style: none;
+  user-select: none;
+  transition: background-color $transition-base;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:hover {
+    background: $background-light;
+  }
+}
+
+.faq-question-text {
+  flex: 1;
+  padding-right: $spacing-md;
+}
+
+.faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform $transition-base;
+}
+
+.faq-icon-open {
+  display: none;
+}
+
+.faq-icon-closed {
+  display: block;
+}
+
+details[open] .faq-icon-open {
+  display: block;
+}
+
+details[open] .faq-icon-closed {
+  display: none;
+}
+
+details[open] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 $spacing-lg $spacing-lg;
+  font-size: $font-size-base;
+  line-height: 1.8;
+  color: $text-secondary;
+  white-space: pre-line;
+  animation: fadeIn 0.3s ease-in-out;
+
+  strong {
+    font-weight: $font-weight-semibold;
+    color: $text-primary;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Trusted By Section
+.faq-trusted-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-white;
+}
+
+.faq-trusted-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-trusted-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-3xl;
+  text-align: center;
+}
+
+.faq-trusted-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-3xl;
+}
+
+.faq-trusted-logo {
+  flex: 0 0 auto;
+  max-width: 150px;
+  opacity: 0.7;
+  transition: opacity $transition-base;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+// Download Guide Section
+.faq-download-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-light;
+}
+
+.faq-download-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: $spacing-3xl;
+  align-items: center;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.faq-download-image {
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    max-width: 297px;
+    height: auto;
+    display: block;
+  }
+}
+
+.faq-download-content {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+}
+
+.faq-download-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin: 0;
+}
+
+.faq-download-button {
+  display: inline-block;
+  padding: $spacing-md $spacing-xl;
+  background: #72fd02;
+  color: $text-primary;
+  text-decoration: none;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-align: center;
+  transition: all $transition-base;
+  max-width: fit-content;
+
+  &:hover {
+    background: #5fd002;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(114, 253, 2, 0.3);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+

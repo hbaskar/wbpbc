@@ -1,0 +1,78 @@
+This is an angular v21 project with ssr.
+This project is a website for pickleball, tennis court construction company.
+The website should be responsive and work on both desktop and mobile.
+
+This website has two logos
+wbpbc-logo.webp
+wbtc-logo.png 
+Place them next to each other whenever there is a need for logo.
+
+The website should have "top-nav" and "footer" at all the pages.
+
+top-nav
+=======
+The top-nav should have the logo on the top left.
+The menu inside the top nav are
+Home
+Residential (Dropdown menu) -> Pickleball Courts Construction, Multi Sport Construction, Basketball courts, Artificail Turf and Putting Greens, Court Fencing, Hoops and Nets, Custom Courts, Pickleball Court Resurfacing
+Commercial (Dropdown menu) -> Indoor Pickleball Court, Tennis Court Rsurfacing, Court Fencing, Court Resurfacing, Adding Pickleball Lines to Tennis Court, Tennis Court Construction.
+Court Designer
+About Us
+Portfolio
+Blog
+FAQ
+Contact Us
+
+Make sure it works well in Mobile as well because most of the clients use mobile
+
+footer
+======
+The footer content is below.
+In the footer add the logos.
+The Year in the All right reserved,  make it dynamic so that when the new year comes, we don't have to change it manually.
+
+Recognized as Texas’s #1 Court Builder with 800+ satisfied homeowners.
+4444 Westheimer rd Houston, Tx 77027
+Webuildpickleballcourts@gmail.com
+832.922.7597
+4095049910
+
+
+Residential
+    Pickleball
+    Multi-Sport
+    Artificial Turf & Putting Greens
+    Court Fencing
+    Hoops and Nets
+    Custom Courts
+    Tennis Court Construction
+
+Commercial
+    Pickleball Courts
+    Court Fencing
+    Resurfacing
+    Adding Pickleball Lines
+    Tennis Court Resurfacing
+    Pickleball Court Resurfacing
+
+Company
+    Home
+    About
+    Portfolio
+    Blog
+    Faq
+    Contact
+
+© 2026 All rights reserved | Designed with ❤ by Hari
+
+Facebook Instagram
+
+The options in the menu is placed in the footer as well as you can see.
+
+Make all the static content placed in a separate service so that we can maintain it easily.
+
+Create all the page as lazily loaded pages.
+
+Make sure to follow SEO for this project as it is a publicly faced website.
+
+We will implement the contents of each pages later.

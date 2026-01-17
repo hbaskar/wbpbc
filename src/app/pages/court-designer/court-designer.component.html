@@ -1,0 +1,43 @@
+<div class="page-container">
+  <div class="header">
+    <h1 class="page-title">Court Designer</h1>
+    <p class="page-description">
+      Design your perfect court with our interactive designer. Choose from different court types and customize colors to match your vision.
+    </p>
+  </div>
+
+  <div class="court-types-grid">
+    <a [routerLink]="['/court-designer', 'pickleball']" class="court-type-card">
+      <div class="card-image">
+        <img src="court-designer-images/pickleball-court.webp" alt="Pickleball Court" />
+      </div>
+      <h3>Pickleball Court</h3>
+      <p>Design a professional pickleball court with customizable surface colors, kitchen, border, and line colors.</p>
+    </a>
+
+    <a [routerLink]="['/court-designer', 'tennis']" class="court-type-card">
+      <div class="card-image">
+        <img src="court-designer-images/tennis-court.jpeg" alt="Tennis Court" />
+      </div>
+      <h3>Tennis Court</h3>
+      <p>Create a tennis court design with optional pickleball court layouts. Perfect for multi-sport facilities.</p>
+    </a>
+
+    <a [routerLink]="['/court-designer', 'multi-court']" class="court-type-card">
+      <div class="card-image">
+        <img src="court-designer-images/multi-court.webp" alt="Multi-Court" />
+      </div>
+      <h3>Multi-Court</h3>
+      <p>Design a combined court featuring both pickleball and basketball elements with separate line controls.</p>
+    </a>
+
+    <a [routerLink]="['/court-designer', 'basketball']" class="court-type-card">
+      <div class="card-image">
+        <img src="court-designer-images/basketball-court.webp" alt="Basketball Court" />
+      </div>
+      <h3>Basketball Court</h3>
+      <p>Customize a basketball court with main court colors, key area, and optional hash marks and blocks.</p>
+    </a>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+@if (blogPost) {
+  <!-- Blog Detail Header -->
+  <section class="blog-detail-header-section">
+    <div class="blog-detail-header-container">
+      <h1 class="blog-detail-title">{{ blogPost.title }}</h1>
+    </div>
+  </section>
+
+  <!-- Blog Detail Content -->
+  <section class="blog-detail-content-section">
+    <div class="blog-detail-container">
+      @if (blogPost.featuredImage) {
+        <div class="blog-detail-image">
+          <img [src]="blogPost.featuredImage" [alt]="blogPost.title" loading="lazy" />
+        </div>
+      }
+      <div class="blog-detail-content" [innerHTML]="blogPost.content"></div>
+    </div>
+  </section>
+} @else {
+  <section class="blog-detail-not-found">
+    <div class="blog-detail-container">
+      <h1>Blog Post Not Found</h1>
+      <p>The blog post you're looking for doesn't exist.</p>
+      <a routerLink="/blog" class="blog-back-link">Back to Blog</a>
+    </div>
+  </section>
+}
+

@@ -1,0 +1,69 @@
+This file elaborates aboou the home page.
+
+The hero section title is 
+title:
+Professional Pickleball & Tennis Courts construction for residential & commercial
+
+description:
+From private backyards to professional clubs, we specialize in custom tennis court builds, resurfacing, and full-service installations.
+
+Book A call now button should redirect the user to Contact Us page.
+
+
+The second section: - clients list
+
+The third section: - welcome message
+
+Welcome to "We Build Pickleball Courts"
+YOUR DREAM COURT, OUR EXPERTISE!
+Whether you need a new court surface or want to revitalize an existing one, we’ve got you covered. Specializing in Pickleball, Basketball, and Tennis Court Surfaces, along with Multi-Use Courts, we’re experts in every aspect. As PPA certified paint installers, we’ve received top-tier training to deliver the best surfacing products and techniques. Our combination of superior products, skilled installation, repairs, and custom designs ensures durable and visually pleasing court surfaces, with coatings lasting 4-6 years.
+
+
+Fourth Section: - OUR SERVICES
+Pickleball Courts
+Elevate your pickleball game to a new level with our meticulously crafted courts. Precision surfaces and professional markings for the ultimate playing experience.
+
+Basketball Courts
+Experience the thrill of hoops on courts designed for excellence. From slam dunks to three-pointers, our basketball courts are built for action.
+
+Putting Greens & Artificial Truf
+Embrace hassle-free greenery with our top-grade artificial turf solutions. Enjoy lush surroundings without the upkeep.
+
+Chain Link Fences
+Combining safety and aesthetics, our chain link fences define boundaries while maintaining an open feel. Security meets style in every link.
+
+Include some images
+
+
+Fifth section - why choose us
+Expertise That Matters
+Our seasoned professionals bring years of experience to every project, ensuring excellence from planning to execution.
+
+Customization Unleashed
+Your court, your way. We tailor designs to match your vision, resulting in a court that's uniquely yours.
+
+
+Quality Redefined
+Only the finest materials grace our courts. We build for longevity, ensuring your court remains a reliable play haven.
+
+Passion for Play
+We're not just builders; we're sports enthusiasts. The love for the game drives us to create courts that enhance your play.
+
+Sixth section - Reviews carousal
+
+each carousal should have the review message.
+the company logo or the person photo
+person name
+person designation
+
+The last section of the home page loads images one by one on scroll
+
+
+Use the static data for all the necesarry data.
+
+On the hero section, include some video preview
+Add some images to the section where it looks good.
+
+Make it clean and pleasant.
+
+

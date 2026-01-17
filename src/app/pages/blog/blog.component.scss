@@ -1,0 +1,111 @@
+@use '../../../styles/variables.scss' as *;
+
+// Blog Header Section
+.blog-header-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-white;
+  text-align: center;
+}
+
+.blog-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-header-title {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+}
+
+.blog-header-description {
+  font-size: $font-size-lg;
+  line-height: 1.6;
+  color: $text-secondary;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// Blog Posts Section
+.blog-posts-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-light;
+}
+
+.blog-posts-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-3xl;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+.blog-post-card {
+  background: $background-white;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.blog-post-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-post-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: $background-light;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-base;
+  }
+
+  .blog-post-card:hover & img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    height: 270px;
+  }
+}
+
+.blog-post-content {
+  padding: $spacing-2xl;
+}
+
+.blog-post-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+  line-height: 1.3;
+}
+
+.blog-post-excerpt {
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin: 0;
+}
+

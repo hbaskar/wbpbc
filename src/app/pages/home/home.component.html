@@ -1,0 +1,251 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-highlight">Professional Pickleball & Tennis Courts construction</span>
+        <span class="title-rest"> for residential & commercial</span>
+      </h1>
+      <p class="hero-description">
+        {{ contentService.getHeroSection().description }}
+      </p>
+      <a routerLink="/contact-us" class="cta-button">Book A Call Now</a>
+    </div>
+    @if (contentService.getHeroSection().videoPreview && showVideo()) {
+      <div class="hero-media">
+        <video
+          class="hero-video"
+          [src]="contentService.getHeroSection().videoPreview"
+          loop
+          muted
+          playsinline
+          preload="auto"
+          controls
+          #heroVideo
+        ></video>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Clients List Section -->
+<section class="clients-section">
+  <div class="clients-container">
+    <h2 class="section-title">Our Trusted Clients</h2>
+    <p class="clients-tag">Pro level quality from backyards to facilities</p>
+    <div class="clients-grid">
+      @for (clientLogo of contentService.getClientsList(); track $index) {
+        <div class="client-item">
+          <img [src]="clientLogo" [alt]="'Client ' + ($index + 1)" class="client-logo" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Welcome Message Section -->
+<section class="welcome-section">
+  <div class="welcome-container">
+    <div class="welcome-media">
+      @if (contentService.getWelcomeMessage().videoLink) {
+        <video
+          class="welcome-video"
+          [src]="contentService.getWelcomeMessage().videoLink"
+          loop
+          muted
+          playsinline
+          preload="auto"
+          controls
+          #welcomeVideo
+        ></video>
+      }
+    </div>
+    <div class="welcome-content">
+      <h2 class="welcome-title">
+        Welcome to<br />
+        <span class="welcome-title-highlight">We Build Pickleball Courts</span>
+      </h2>
+      <h3 class="welcome-subtitle">
+        {{ contentService.getWelcomeMessage().subtitle }}
+      </h3>
+      <p class="welcome-description">
+        {{ contentService.getWelcomeMessage().description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+  <div class="services-container">
+    <h2 class="section-title" style="margin-bottom: 3rem; color: black;">Our Services</h2>
+    <div class="services-grid">
+      @for (service of contentService.getServices(); track $index) {
+        <div class="service-card">
+          <div class="service-image-placeholder">
+            <img
+              [src]="service.image || '/placeholder-service.jpg'"
+              [alt]="service.title"
+              class="service-image"
+            />
+          </div>
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-description">{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+  <div class="why-choose-container">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="why-choose-grid">
+      @for (item of contentService.getWhyChooseUsItems(); track $index) {
+        <div class="why-choose-card">
+          @if (item.icon) {
+            <div class="why-choose-icon">
+              <img [src]="item.icon" [alt]="item.title" />
+            </div>
+          }
+          <h3 class="why-choose-title">{{ item.title }}</h3>
+          <p class="why-choose-description">{{ item.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Reviews Carousel Section -->
+<section class="reviews-section">
+  <div class="reviews-container">
+    <div class="reviews-carousel">
+      <button
+        class="carousel-button carousel-prev"
+        (click)="prevReview()"
+        aria-label="Previous review"
+      >
+        ‹
+      </button>
+      <div class="review-card">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="reviews-satisfied">800+ SATISFIED CUSTOMERS</p>
+        <div class="review-content-wrapper">
+          @for (review of contentService.getReviews(); track $index) {
+            <div 
+              class="review-content"
+              [class.active]="currentReviewIndex() === $index"
+            >
+              <p class="review-message">"{{ review.message }}"</p>
+              <div class="review-author">
+                @if (review.personPhoto) {
+                  <img
+                    [src]="review.personPhoto"
+                    [alt]="review.personName"
+                    class="author-photo"
+                  />
+                } @else if (review.companyLogo) {
+                  <img
+                    [src]="review.companyLogo"
+                    [alt]="review.personName"
+                    class="author-logo"
+                  />
+                } @else {
+                  <div class="author-placeholder">
+                    {{ review.personName.charAt(0) }}
+                  </div>
+                }
+                <div class="author-info">
+                  <p class="author-name">{{ review.personName }}</p>
+                  <p class="author-designation">{{ review.personDesignation }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      <button
+        class="carousel-button carousel-next"
+        (click)="nextReview()"
+        aria-label="Next review"
+      >
+        ›
+      </button>
+    </div>
+    <div class="carousel-indicators">
+      @for (
+        review of contentService.getReviews();
+        track $index;
+        let i = $index
+      ) {
+        <button
+          class="indicator"
+          [class.active]="currentReviewIndex() === i"
+          (click)="goToReview(i)"
+          [attr.aria-label]="'Go to review ' + (i + 1)"
+        ></button>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+  <div class="gallery-container">
+    <h2 class="section-title">Our Work</h2>
+    <div class="gallery-grid">
+      @for (image of contentService.getGalleryImages(); track $index; let i = $index) {
+        <div
+          class="gallery-item"
+          [class.visible]="visibleImages().has(i)"
+          (click)="openLightbox(i)"
+        >
+          <img
+            [src]="image"
+            [alt]="'Gallery image ' + (i + 1)"
+            class="gallery-image"
+            [attr.data-index]="i"
+            loading="lazy"
+          />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+@if (lightboxOpen()) {
+  <div class="lightbox-overlay" (click)="closeLightbox()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox">
+        ×
+      </button>
+      <button class="lightbox-nav lightbox-prev" (click)="prevLightboxImage()" aria-label="Previous image">
+        ‹
+      </button>
+      <div class="lightbox-image-container">
+        <img
+          [src]="contentService.getGalleryImages()[lightboxImageIndex()]"
+          [alt]="'Gallery image ' + (lightboxImageIndex() + 1)"
+          class="lightbox-image"
+        />
+      </div>
+      <button class="lightbox-nav lightbox-next" (click)="nextLightboxImage()" aria-label="Next image">
+        ›
+      </button>
+      <div class="lightbox-actions">
+        <button class="lightbox-action-btn" (click)="downloadImage()" aria-label="Download image">
+          <span>⬇</span> Download
+        </button>
+        <button class="lightbox-action-btn" (click)="shareImage()" aria-label="Share image">
+          <span>🔗</span> Share
+        </button>
+      </div>
+      <div class="lightbox-counter">
+        {{ lightboxImageIndex() + 1 }} / {{ contentService.getGalleryImages().length }}
+      </div>
+    </div>
+  </div>
+}
+

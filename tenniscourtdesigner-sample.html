@@ -1,0 +1,78 @@
+<div class="court-designer-container">
+    <div class="designer-controls">
+      <div class="color-picker-group">
+        <h3>Tennis Court 120'x60'</h3>
+
+        <!-- Court Color -->
+        <div class="color-option">
+          <label>Court Color:</label>
+          <div class="custom-select" data-zone="court-surface">
+            <div class="selected-option" data-value="#3e714b" style="background:#3e714b; color:#fff;">
+              <span class="title">Tournament Green (Default)</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="custom-options">
+              <div class="option" data-value="#3e714b" style="background:#3e714b"><div class="swatch" style="background:#3e714b"></div>Tournament Green</div>
+              <div class="option" data-value="#4e7b3e" style="background:#4e7b3e"><div class="swatch" style="background:#4e7b3e"></div>Forest Green</div>
+              <div class="option" data-value="#92928b" style="background:#92928b"><div class="swatch" style="background:#92928b"></div>Classic Grey</div>
+              <div class="option" data-value="#2e93b3" style="background:#2e93b3"><div class="swatch" style="background:#2e93b3"></div>Oasis Blue</div>
+              <div class="option" data-value="#b33132" style="background:#b33132"><div class="swatch" style="background:#b33132"></div>Red</div>
+              <div class="option" data-value="#111111" style="background:#111111"><div class="swatch" style="background:#111111"></div>Black</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Border Color -->
+        <div class="color-option">
+          <label>Border Color:</label>
+          <div class="custom-select" data-zone="border-surface">
+            <div class="selected-option" data-value="#b33132" style="background:#b33132; color:#fff;">
+              <span class="title">Red (Default)</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="custom-options">
+              <div class="option" data-value="#b33132" style="background:#b33132"><div class="swatch" style="background:#b33132"></div>Red</div>
+              <div class="option" data-value="#92928b" style="background:#92928b"><div class="swatch" style="background:#92928b"></div>Classic Grey</div>
+             <div class="option" data-value="#3e714b" style="background:#3e714b"><div class="swatch" style="background:#3e714b"></div>Tournament Green</div>
+              
+              <div class="option" data-value="#284d80" style="background:#284d80"><div class="swatch" style="background:#284d80"></div>Tournament Blue</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pickleball Court Option -->
+        <div class="color-option">
+          <label>Optional Add Pickleball Court:</label>
+          <div class="custom-select" data-zone="pickleball-court">
+            <div class="selected-option" data-value="4 Courts (Each Corner)" style="color: #000;">
+              <span class="title">4 Courts (Each Corner)</span>
+              <span class="arrow">▼</span>
+            </div>
+            <div class="custom-options">
+              <div class="option" data-value="No Pickleball Courts" style="color: #000;">No Pickleball Courts</div>
+              <div class="option" data-value="1 Court (Center)" style="color: #000;">1 Court (Center)</div>
+              <div class="option" data-value="1 Court (Left Baseline)" style="color: #000;">1 Court (Left Baseline)</div>
+              <div class="option" data-value="2 Courts (Both Baselines)" style="color: #000;">2 Courts (Both Baselines)</div>
+              <div class="option" data-value="4 Courts (Each Corner)" style="color: #000;">4 Courts (Each Corner)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="court-visualization">
+      <svg id="court-svg" viewBox="0 0 1200 600" class="court-svg">
+        <!-- Border -->
+        <rect id="border-surface" x="0" y="0" width="1200" height="600" fill="#b33132" stroke="none"></rect> <!-- Updated to red -->
+        <!-- Court Surface -->
+        <rect id="court-surface" x="210" y="120" width="780" height="360" fill="#3e714b" stroke="#ffffff" stroke-width="6"></rect>
+        <!-- Service Boxes -->
+        <rect id="service-boxes" x="390" y="165" width="420" height="270" fill="#3e714b" stroke="#ffffff" stroke-width="6"></rect>
+        <!-- Court Lines -->
+        <line class="court-line" x1="210" y1="165" x2="990" y2="165" stroke="#ffffff" stroke-width="6"></line>
+        <line class="court-line" x1="210" y1="435" x2="990" y2="435" stroke="#ffffff" stroke-width="6"></line>
+        <line class="court-line" x1="390" y1="300" x2="810" y2="300" stroke="#ffffff" stroke-width="6"></line>
+        <line class="court-line" x1="600" y1="100" x2="600" y2="500" stroke="#ffffff" stroke-width="6"></line>
+      </svg>
+    </div>
+  </div>

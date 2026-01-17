@@ -1,0 +1,442 @@
+@use '../../../styles/variables.scss' as *;
+
+// Main Contact Section
+.contact-main-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-light;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.contact-main-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: $spacing-3xl;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-lg) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl;
+  }
+}
+
+// Contact Form Section
+.contact-form-section {
+  background: $background-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-3xl;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.contact-form-header {
+  margin-bottom: $spacing-3xl;
+}
+
+.contact-form-title {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+  line-height: 1.3;
+}
+
+.contact-form-description {
+  font-size: $font-size-lg;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin: 0 0 $spacing-2xl;
+}
+
+.contact-form-subtitle {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-md;
+  line-height: 1.3;
+}
+
+.contact-form-subtitle-text {
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin: 0 0 $spacing-xl;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-xl;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+  }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.form-field-half {
+  // Already handled by grid
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+  display: block;
+}
+
+.required-asterisk {
+  color: #dc3545;
+  margin-left: $spacing-xs;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: $spacing-md;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  color: $text-primary;
+  background: $background-white;
+  transition: all $transition-base;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: #72fd02;
+    box-shadow: 0 0 0 3px rgba(114, 253, 2, 0.1);
+  }
+
+  &.form-input-invalid {
+    border-color: #dc3545;
+    
+    &:focus {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+    }
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 9L1 4H11L6 9Z' fill='%23333'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right $spacing-md center;
+  background-size: 12px;
+  padding-right: $spacing-3xl;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  padding: $spacing-sm;
+  border-radius: $border-radius-md;
+  transition: all $transition-base;
+
+  &.radio-group-invalid {
+    border: 1px solid #dc3545;
+    background-color: rgba(220, 53, 69, 0.05);
+  }
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  cursor: pointer;
+  font-size: $font-size-base;
+  color: $text-primary;
+
+  input[type='radio'] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #72fd02;
+  }
+
+  span {
+    user-select: none;
+  }
+}
+
+.form-error {
+  font-size: $font-size-sm;
+  color: #dc3545;
+  margin-top: -$spacing-xs;
+}
+
+.form-submit {
+  margin-top: $spacing-2xl;
+  grid-column: 1 / -1;
+}
+
+.submit-button {
+  width: 100%;
+  padding: $spacing-md $spacing-xl;
+  background: #72fd02;
+  color: $text-primary;
+  border: none;
+  border-radius: $border-radius-md;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover:not(:disabled) {
+    background: #5fd002;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(114, 253, 2, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.form-success {
+  margin-top: $spacing-lg;
+  padding: $spacing-lg;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: $border-radius-md;
+  color: #155724;
+
+  p {
+    margin: 0;
+    font-size: $font-size-base;
+  }
+}
+
+// Contact Info Section
+.contact-info-section {
+  background: $background-white;
+  border-radius: $border-radius-lg;
+  padding: $spacing-3xl;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: $spacing-xl;
+  height: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-lg) {
+    position: static;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-xl $spacing-md;
+  }
+}
+
+.contact-info-title {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-2xl;
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-2xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+}
+
+.contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  color: $text-primary;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact-info-text {
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text-primary;
+  flex: 1;
+}
+
+.contact-info-link {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+  text-decoration: none;
+  color: inherit;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.contact-start-button {
+  display: block;
+  width: 100%;
+  padding: $spacing-md $spacing-xl;
+  background: #72fd02;
+  color: $text-primary;
+  text-decoration: none;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-align: center;
+  transition: all $transition-base;
+  margin-bottom: $spacing-2xl;
+
+  &:hover {
+    background: #5fd002;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(114, 253, 2, 0.3);
+  }
+}
+
+.contact-social-icons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: flex-start;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-md;
+  background: $background-light;
+  color: $text-primary;
+  text-decoration: none;
+  transition: all $transition-base;
+
+  &:hover {
+    background: #72fd02;
+    color: $text-primary;
+    transform: translateY(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Rating Section
+.contact-rating-section {
+  padding: $spacing-4xl $spacing-lg;
+  background: $background-white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-2xl $spacing-md;
+  }
+}
+
+.contact-rating-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-rating-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
+// Map Section
+.contact-map-section {
+  padding: 0;
+  background: $background-white;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.contact-map-container {
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  @media (max-width: $breakpoint-md) {
+    height: 400px;
+  }
+}
+
+.contact-map {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  box-sizing: border-box;
+}
+

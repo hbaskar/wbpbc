@@ -1,0 +1,31 @@
+<!-- Blog Header Section -->
+<section class="blog-header-section">
+  <div class="blog-header-container">
+    <h1 class="blog-header-title">{{ contentService.getBlogHeader().title }}</h1>
+    <p class="blog-header-description">{{ contentService.getBlogHeader().description }}</p>
+  </div>
+</section>
+
+<!-- Blog Posts Grid -->
+<section class="blog-posts-section">
+  <div class="blog-posts-container">
+    <div class="blog-posts-grid">
+      @for (post of contentService.getBlogPosts(); track post.slug) {
+        <article class="blog-post-card">
+          <a [routerLink]="['/blog', post.slug]" class="blog-post-link">
+            <div class="blog-post-image">
+              @if (post.featuredImage) {
+                <img [src]="post.featuredImage" [alt]="post.title" loading="lazy" />
+              }
+            </div>
+            <div class="blog-post-content">
+              <h2 class="blog-post-title">{{ post.title }}</h2>
+              <p class="blog-post-excerpt">{{ post.excerpt }}</p>
+            </div>
+          </a>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+

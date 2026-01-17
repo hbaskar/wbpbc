@@ -1,0 +1,211 @@
+<!-- Header Section -->
+<section class="about-header-section">
+  <div class="about-header-container">
+    <h1 class="about-header-title">{{ contentService.getAboutUsHeader().title }}</h1>
+    <p class="about-header-description">{{ contentService.getAboutUsHeader().description }}</p>
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="about-main-section">
+  <div class="about-main-container">
+    <div class="about-main-image">
+      <img
+        [src]="contentService.getAboutUsMain().image"
+        [alt]="contentService.getAboutUsMain().title"
+        loading="lazy"
+      />
+    </div>
+    <div class="about-main-content">
+      <h2 class="about-main-title">{{ contentService.getAboutUsMain().title }}</h2>
+      <p class="about-main-description" [innerHTML]="(contentService.getAboutUsMain().description | nl2br)"></p>
+      <a routerLink="/contact-us" class="about-cta-button">Get Your Indoor Pickleball Court Quote – It's Fast & Free</a>
+    </div>
+  </div>
+</section>
+
+<!-- Service Area Section -->
+<section class="about-service-area-section">
+  <div class="about-service-area-container">
+    <div class="about-service-area-content">
+      <h2 class="about-service-area-title">{{ contentService.getAboutUsServiceArea().title }}</h2>
+      <p class="about-service-area-description" [innerHTML]="(contentService.getAboutUsServiceArea().description | nl2br)"></p>
+      <a routerLink="/contact-us" class="about-cta-button">Get Your Indoor Pickleball Court Quote – It's Fast & Free</a>
+    </div>
+    <div class="about-service-area-image">
+      <img
+        [src]="contentService.getAboutUsServiceArea().image"
+        [alt]="contentService.getAboutUsServiceArea().title"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Accordion Section -->
+<section class="about-faq-section">
+  <div class="about-faq-container">
+    <h2 class="about-faq-title">We're proud to be the best at building</h2>
+    <div class="about-faq-accordion">
+      @for (faq of contentService.getAboutUsFaqs(); track $index; let i = $index) {
+        <details class="about-faq-item" [open]="i === 0">
+          <summary class="about-faq-question">
+            <span>{{ faq.question }}</span>
+            <span class="about-faq-icon">
+              <svg
+                class="about-faq-icon-open"
+                width="12"
+                height="12"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+              >
+                <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+              </svg>
+              <svg
+                class="about-faq-icon-closed"
+                width="12"
+                height="12"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+              >
+                <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="about-faq-answer" [innerHTML]="(faq.answer | nl2br)"></div>
+        </details>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="about-stats-section">
+  <div class="about-stats-container">
+    <div class="about-stats-image">
+      <img
+        src="about-us/imgi_31_505742772_17939667606009322_5116293362220830711_n.webp"
+        alt="Stats background"
+        loading="lazy"
+      />
+    </div>
+    <div class="about-stats-overlay">
+      <div class="about-stats-card">
+        <h3 class="about-stats-card-title">{{ contentService.getAboutUsStats().people.title }}</h3>
+        <div class="about-stats-card-value">
+          <span class="about-stats-number">{{ contentService.getAboutUsStats().people.value }}+</span>
+        </div>
+        <p class="about-stats-card-subtitle">{{ contentService.getAboutUsStats().people.subtitle }}</p>
+      </div>
+      <div class="about-stats-card">
+        <h3 class="about-stats-card-title">{{ contentService.getAboutUsStats().courts.title }}</h3>
+        <div class="about-stats-card-value">
+          <span class="about-stats-number">{{ contentService.getAboutUsStats().courts.value }}+</span>
+        </div>
+        <p class="about-stats-card-subtitle">{{ contentService.getAboutUsStats().courts.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Are / Mission Section -->
+<section class="about-who-section">
+  <div class="about-who-container">
+    <div class="about-who-images">
+      <img
+        src="about-us/google-review.webp"
+        alt="Team image 1"
+        class="about-who-image about-who-image-1"
+        loading="lazy"
+      />
+      <img
+        src="about-us/1ac0c04a753462c500a62e0797a5939af4b2b2d9.webp"
+        alt="Team image 2"
+        class="about-who-image about-who-image-2"
+        loading="lazy"
+      />
+      <img
+        src="about-us/5a9c6a46b314b2202b282653b63363eba82b9a37.webp"
+        alt="Team image 3"
+        class="about-who-image about-who-image-3"
+        loading="lazy"
+      />
+    </div>
+    <div class="about-who-content">
+      <div class="about-who-item">
+        <h3 class="about-who-item-title">{{ contentService.getAboutUsWhoWeAre().title }}</h3>
+        <p class="about-who-item-description">{{ contentService.getAboutUsWhoWeAre().description }}</p>
+      </div>
+      <div class="about-who-item">
+        <h3 class="about-who-item-title">{{ contentService.getAboutUsMission().title }}</h3>
+        <p class="about-who-item-description">{{ contentService.getAboutUsMission().description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Principles Section -->
+<section class="about-principles-section">
+  <div class="about-principles-container">
+    <h2 class="about-principles-title">Our Principles of Success</h2>
+    <div class="about-principles-grid">
+      @for (principle of contentService.getAboutUsPrinciples(); track $index) {
+        <div class="about-principle-card">
+          <div class="about-principle-icon">
+            @if (principle.icon) {
+              <img [src]="principle.icon" [alt]="principle.title" />
+            }
+          </div>
+          <h3 class="about-principle-title">{{ principle.title }}</h3>
+          <p class="about-principle-description">{{ principle.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Connect Design Build Section -->
+<section class="about-connect-section">
+  <div class="about-connect-container">
+    <h2 class="about-connect-title">Connect. Design. Build.</h2>
+    <p class="about-connect-description">
+      Custom layouts, materials, and features—We build pickleball Courts of your dreams with our easy-to-use online tool.
+    </p>
+    <a routerLink="/contact-us" class="about-cta-button">Get Free Quote</a>
+  </div>
+</section>
+
+<!-- Trusted By Section -->
+<section class="about-trusted-section">
+  <div class="about-trusted-container">
+    <h2 class="about-trusted-title">Trusted by</h2>
+    <div class="about-trusted-logos">
+      @for (logo of contentService.getClientsList(); track $index) {
+        <div class="about-trusted-logo">
+          <img [src]="logo" [alt]="'Client ' + ($index + 1)" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Top Projects Section -->
+<section class="about-projects-section">
+  <div class="about-projects-container">
+    <h2 class="about-projects-title">Top Projects</h2>
+    <div class="about-projects-grid">
+      @for (project of contentService.getAboutUsProjects(); track $index) {
+        <div class="about-project-card">
+          <div class="about-project-image">
+            <img [src]="project.image" [alt]="project.title" loading="lazy" />
+          </div>
+          <h3 class="about-project-title">{{ project.title }}</h3>
+        </div>
+      }
+    </div>
+    <div class="about-projects-cta">
+      <a routerLink="/contact-us" class="about-cta-button">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+

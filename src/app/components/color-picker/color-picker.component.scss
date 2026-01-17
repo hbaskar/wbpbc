@@ -1,0 +1,114 @@
+@use '../../../styles/variables.scss' as *;
+
+.color-option {
+  display: block;
+  margin-bottom: $spacing-lg;
+
+  label {
+    display: block;
+    margin-bottom: $spacing-sm;
+    font-weight: $font-weight-semibold;
+    color: $text-primary;
+    font-size: $font-size-base;
+    font-family: $font-family-primary;
+  }
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  border-radius: $border-radius-md;
+  overflow: visible;
+}
+
+.selected-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-md $spacing-lg;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  border: 1px solid $border-color;
+  transition: all $transition-base;
+  font-family: $font-family-primary;
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .title {
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-base;
+  }
+
+  .arrow {
+    opacity: 0.7;
+    transition: transform $transition-base, opacity $transition-base;
+    font-size: $font-size-sm;
+  }
+
+  &:hover .arrow {
+    opacity: 1;
+  }
+}
+
+.custom-select.open {
+  .selected-option .arrow {
+    transform: rotate(180deg);
+  }
+}
+
+.custom-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: $background-white;
+  border-radius: $border-radius-md;
+  border: 1px solid $border-color;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  z-index: $z-index-dropdown;
+  max-height: 260px;
+  overflow: auto;
+}
+
+.custom-select.open .custom-options {
+  display: block;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md $spacing-lg;
+  cursor: pointer;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-base;
+  font-family: $font-family-primary;
+  transition: background-color $transition-base;
+
+  &:hover {
+    background-color: $background-light;
+  }
+
+  &:first-child {
+    border-top-left-radius: $border-radius-md;
+    border-top-right-radius: $border-radius-md;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $border-radius-md;
+    border-bottom-right-radius: $border-radius-md;
+  }
+}
+
+.swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: $border-radius-sm;
+  border: 1px solid #fff;
+  flex: 0 0 22px;
+}
+

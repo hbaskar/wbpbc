@@ -1,0 +1,105 @@
+<!-- Main Content Section with Sidebar -->
+<section class="faq-main-section">
+  <div class="faq-main-container">
+    <!-- Blog Links Sidebar -->
+    <aside class="faq-sidebar">
+      <div class="faq-blogs-section">
+        <div class="faq-blogs-list">
+          @for (blog of contentService.getFaqBlogLinks(); track blog.slug) {
+            <article class="faq-blog-card">
+              <a [routerLink]="['/blog', blog.slug]" class="faq-blog-link">
+                <div class="faq-blog-image">
+                  @if (blog.featuredImage) {
+                    <img [src]="blog.featuredImage" [alt]="blog.title" loading="lazy" />
+                  }
+                </div>
+                <div class="faq-blog-content">
+                  <h3 class="faq-blog-title">{{ blog.title }}</h3>
+                  @if (blog.date) {
+                    <div class="faq-blog-date">{{ blog.date }}</div>
+                  }
+                  <span class="faq-blog-read-more">Read More »</span>
+                </div>
+              </a>
+            </article>
+          }
+        </div>
+      </div>
+    </aside>
+
+    <!-- FAQ Accordion Main Content -->
+    <main class="faq-accordion-section">
+      <div class="faq-accordion-container">
+        <h2 class="faq-accordion-title">Frequently Asked Sport Court Questions</h2>
+        <div class="faq-accordion">
+          @for (faq of contentService.getFaqItems(); track $index; let i = $index) {
+            <details class="faq-item" [open]="i === 0">
+              <summary class="faq-question">
+                <span class="faq-question-text">{{ faq.question }}</span>
+                <span class="faq-icon">
+                  <svg
+                    class="faq-icon-open"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 320 512"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+                    ></path>
+                  </svg>
+                  <svg
+                    class="faq-icon-closed"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 320 512"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    ></path>
+                  </svg>
+                </span>
+              </summary>
+              <div class="faq-answer" [innerHTML]="(faq.answer | nl2br)"></div>
+            </details>
+          }
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<!-- Trusted By Section -->
+<section class="faq-trusted-section">
+  <div class="faq-trusted-container">
+    <h2 class="faq-trusted-title">Trusted by</h2>
+    <div class="faq-trusted-logos">
+      @for (logo of contentService.getClientsList(); track $index) {
+        <div class="faq-trusted-logo">
+          <img [src]="logo" [alt]="'Client ' + ($index + 1)" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Download Guide Section -->
+<section class="faq-download-section">
+  <div class="faq-download-container">
+    <div class="faq-download-image">
+      <img
+        src="faq/2f63575a771cd0a9ca5ad4f91d083c4b90af933b.png"
+        alt="Ultimate Hard Court Guide"
+        loading="lazy"
+      />
+    </div>
+    <div class="faq-download-content">
+      <h2 class="faq-download-title">Ultimate Hard Court Guide Download</h2>
+      <a routerLink="/contact-us" class="faq-download-button">Download Now</a>
+    </div>
+  </div>
+</section>
+

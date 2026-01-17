@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "88455ce5-0268-41ba-bb0c-8e21ea4d27b1"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -40,6 +41,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/webuildpickleballcourts/",
               "budgets": [
                 {
                   "type": "initial",
@@ -48,8 +50,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "15kB",
+                  "maximumError": "20kB"
                 }
               ],
               "outputHashing": "all"
@@ -64,6 +66,10 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "host": "127.0.0.1",
+            "port": 4201
+          },
           "configurations": {
             "production": {
               "buildTarget": "wbpbc-ui:build:production"

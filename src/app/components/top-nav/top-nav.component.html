@@ -1,0 +1,96 @@
+<nav class="top-nav" role="navigation" aria-label="Main navigation">
+  @if (isMobileMenuOpen()) {
+    <div
+      class="mobile-menu-backdrop"
+      [class.show]="isMobileMenuOpen()"
+      (click)="isMobileMenuOpen.set(false)"
+    ></div>
+  }
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a routerLink="/" class="logo-link" aria-label="Home">
+        <img src="wbpbc-logo.webp" alt="WBPBC Logo" class="logo logo-primary" />
+        <img src="wbtc-logo.png" alt="WBTC Logo" class="logo logo-secondary" />
+      </a>
+    </div>
+
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-label="Toggle mobile menu"
+      aria-expanded="false"
+      [attr.aria-expanded]="isMobileMenuOpen()"
+      (click)="toggleMobileMenu()"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <ul class="nav-menu" [class.menu-open]="isMobileMenuOpen()">
+      @for (item of navigationItems; track item.label) {
+        <li class="nav-item" [class.has-dropdown]="hasChildren(item)">
+          @if (hasChildren(item)) {
+            <div class="dropdown-wrapper">
+              <a
+                class="nav-link dropdown-trigger"
+                [routerLink]="item.route"
+                [class.active]="isActiveRoute(item.route)"
+                (click)="handleDropdownClick(item, $event)"
+                (mouseenter)="activeDropdown.set(item.label)"
+                (mouseleave)="closeDropdown()"
+                [attr.aria-expanded]="activeDropdown() === item.label"
+                aria-haspopup="true"
+              >
+                {{ item.label }}
+                <svg
+                  class="dropdown-arrow"
+                  [class.open]="activeDropdown() === item.label"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 9L1 4H11L6 9Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <ul
+                class="dropdown-menu"
+                [class.show]="activeDropdown() === item.label"
+                (mouseenter)="activeDropdown.set(item.label)"
+                (mouseleave)="closeDropdown()"
+              >
+                @for (child of item.children; track child.label + child.route) {
+                  <li>
+                    <a
+                      class="dropdown-link"
+                      [routerLink]="child.route"
+                      [class.active]="isActiveRoute(child.route)"
+                      (click)="isMobileMenuOpen.set(false); activeDropdown.set(null)"
+                    >
+                      {{ child.label }}
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+          } @else {
+            <a
+              class="nav-link"
+              [routerLink]="item.route"
+              [class.active]="isActiveRoute(item.route)"
+              (click)="isMobileMenuOpen.set(false)"
+            >
+              {{ item.label }}
+            </a>
+          }
+        </li>
+      }
+    </ul>
+  </div>
+</nav>
+

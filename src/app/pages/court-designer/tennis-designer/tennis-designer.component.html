@@ -1,0 +1,54 @@
+<div class="court-designer-wrapper">
+  <div class="designer-header">
+    <h1 class="designer-title">Tennis Court Designer</h1>
+    <p class="designer-subtitle">Design a professional tennis court with customizable colors and optional pickleball court layouts.</p>
+  </div>
+  
+  <div class="court-designer-container">
+    <div class="designer-controls">
+    <div class="color-picker-group">
+      <h3>Tennis Court 120'x60'</h3>
+
+      <app-color-picker
+        [options]="courtColorOptions"
+        [selectedValue]="courtColor()"
+        label="Court Color:"
+        zone="court-surface"
+        (valueChange)="onCourtColorChange($event)"
+      ></app-color-picker>
+
+      <app-color-picker
+        [options]="borderColorOptions"
+        [selectedValue]="borderColor()"
+        label="Border Color:"
+        zone="border-surface"
+        (valueChange)="onBorderColorChange($event)"
+      ></app-color-picker>
+
+      <app-text-select
+        [options]="pickleballLayoutOptions"
+        [selectedValue]="pickleballLayout()"
+        label="Optional Add Pickleball Court:"
+        (valueChange)="onPickleballLayoutChange($event)"
+      ></app-text-select>
+    </div>
+  </div>
+
+  <div class="court-visualization">
+    <svg #courtSvg viewBox="0 0 1200 600" class="court-svg">
+      <!-- Border -->
+      <rect id="border-surface" x="0" y="0" width="1200" height="600" fill="#b33132" stroke="none"></rect>
+      <!-- Court Surface -->
+      <rect id="court-surface" x="210" y="120" width="780" height="360" fill="#3e714b" stroke="#ffffff" stroke-width="6"></rect>
+      <!-- Service Boxes -->
+      <rect id="service-boxes" x="390" y="165" width="420" height="270" fill="#3e714b" stroke="#ffffff" stroke-width="6"></rect>
+      <!-- Court Lines -->
+      <line class="court-line" x1="210" y1="165" x2="990" y2="165" stroke="#ffffff" stroke-width="6"></line>
+      <line class="court-line" x1="210" y1="435" x2="990" y2="435" stroke="#ffffff" stroke-width="6"></line>
+      <line class="court-line" x1="390" y1="300" x2="810" y2="300" stroke="#ffffff" stroke-width="6"></line>
+      <line class="court-line" x1="600" y1="100" x2="600" y2="500" stroke="#ffffff" stroke-width="6"></line>
+    </svg>
+  </div>
+  </div>
+</div>
+

@@ -1,0 +1,99 @@
+<footer class="footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-logos">
+        <img src="wbpbc-logo.webp" alt="WBPBC Logo" class="footer-logo" />
+        <img src="wbtc-logo.png" alt="WBTC Logo" class="footer-logo" />
+      </div>
+      <div class="footer-info">
+        <p class="footer-tagline">{{ contentService.getCompanyInfo().tagline }}</p>
+        <div class="footer-contact">
+          <p class="contact-item">
+            <span class="contact-label">Address:</span>
+            {{ contentService.getCompanyInfo().address }}
+          </p>
+          <p class="contact-item">
+            <span class="contact-label">Email:</span>
+            <a [href]="'mailto:' + contentService.getCompanyInfo().email" class="contact-link">
+              {{ contentService.getCompanyInfo().email }}
+            </a>
+          </p>
+          <p class="contact-item">
+            <span class="contact-label">Phone:</span>
+            <a [href]="'tel:' + contentService.getCompanyInfo().phone1" class="contact-link">
+              {{ contentService.getCompanyInfo().phone1 }}
+            </a>
+            <span class="contact-separator">|</span>
+            <a [href]="'tel:' + contentService.getCompanyInfo().phone2" class="contact-link">
+              {{ contentService.getCompanyInfo().phone2 }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3 class="footer-column-title">Residential</h3>
+        <ul class="footer-link-list">
+          @for (link of contentService.getFooterResidentialLinks(); track link.label + link.route) {
+            <li>
+              <a [routerLink]="link.route" class="footer-link">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Commercial</h3>
+        <ul class="footer-link-list">
+          @for (link of contentService.getFooterCommercialLinks(); track link.label + link.route) {
+            <li>
+              <a [routerLink]="link.route" class="footer-link">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-link-list">
+          @for (link of contentService.getFooterCompanyLinks(); track link.label + link.route) {
+            <li>
+              <a [routerLink]="link.route" class="footer-link">{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>
+          © {{ getCurrentYear() }} All rights reserved | Designed with ❤ by Hari
+        </p>
+      </div>
+      <div class="footer-social">
+        <a
+          [href]="contentService.getCompanyInfo().socialMedia.facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="social-link"
+        >
+          Facebook
+        </a>
+        <a
+          [href]="contentService.getCompanyInfo().socialMedia.instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="social-link"
+        >
+          Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
