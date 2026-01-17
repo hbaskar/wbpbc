@@ -1,0 +1,150 @@
+<!-- Header Section -->
+<section class="residential-sub-header-section">
+  <div class="residential-sub-header-container">
+    <h1 class="residential-sub-header-title">{{ pageContent.header.title }}</h1>
+    @if (pageContent.header.subtitle) {
+      <p class="residential-sub-header-subtitle">{{ pageContent.header.subtitle }}</p>
+    }
+  </div>
+</section>
+
+<!-- Hero Section -->
+@if (pageContent.hero) {
+  <section class="residential-sub-hero-section">
+    <div class="residential-sub-hero-container">
+      <div class="residential-sub-hero-content">
+        @if (pageContent.hero.title) {
+          <h2 class="residential-sub-hero-title">{{ pageContent.hero.title }}</h2>
+        }
+        @if (pageContent.hero.description) {
+          <div class="residential-sub-hero-description" [innerHTML]="(pageContent.hero.description | nl2br)"></div>
+        }
+        @if (pageContent.hero.buttonText && pageContent.hero.buttonLink) {
+          <a [routerLink]="pageContent.hero.buttonLink" class="residential-sub-hero-button">{{ pageContent.hero.buttonText }}</a>
+        }
+      </div>
+      @if (pageContent.hero.image) {
+        <div class="residential-sub-hero-image">
+          <img [src]="pageContent.hero.image" [alt]="pageContent.hero.title || 'Hero image'" loading="eager" />
+          <div class="residential-google-review">
+            <img src="/about-us/google-review.webp" alt="Google Review" loading="lazy" />
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+}
+
+<!-- Sections -->
+@if (pageContent.sections && pageContent.sections.length > 0) {
+  @for (section of pageContent.sections; track section.title || $index) {
+    <section class="residential-sub-section" [class.alternate-bg]="$index % 2 === 1">
+      <div class="residential-sub-section-container">
+        @if (section.title) {
+          <h2 class="residential-sub-section-title">{{ section.title }}</h2>
+        }
+        
+        <!-- Items Grid (for Multiple Size Options, etc.) -->
+        @if (section.items && section.items.length > 0) {
+          <div class="residential-sub-items-grid">
+            @for (item of section.items; track item.title) {
+              <div class="residential-sub-item-card">
+                <h3 class="residential-sub-item-title">{{ item.title }}</h3>
+                <p class="residential-sub-item-description">{{ item.description }}</p>
+              </div>
+            }
+          </div>
+        }
+        
+        <!-- Sub Sections (for Court Dimensions, Dream Court) -->
+        @if (section.subSections && section.subSections.length > 0) {
+          <div class="residential-sub-subsections-grid">
+            @for (subSection of section.subSections; track subSection.title || $index) {
+              <div class="residential-sub-subsection-card">
+                @if (subSection.image) {
+                  <div class="residential-sub-subsection-image">
+                    <img [src]="subSection.image" [alt]="subSection.title || 'Subsection image'" loading="lazy" />
+                  </div>
+                }
+                @if (subSection.title) {
+                  <h3 class="residential-sub-subsection-title" [innerHTML]="(subSection.title | nl2br)"></h3>
+                }
+                @if (subSection.buttonLink) {
+                  <a [routerLink]="subSection.buttonLink" class="residential-sub-subsection-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                }
+              </div>
+            }
+          </div>
+        }
+        
+        @if (section.description) {
+          <div class="residential-sub-section-description" [innerHTML]="(section.description | nl2br)"></div>
+        }
+        @if (section.image) {
+          <div class="residential-sub-section-image">
+            <img [src]="section.image" [alt]="section.title || 'Section image'" loading="lazy" />
+          </div>
+        }
+        @if (section.buttonText && section.buttonLink) {
+          <div class="residential-sub-section-cta">
+            <a [routerLink]="section.buttonLink" class="residential-sub-section-button">{{ section.buttonText }}</a>
+          </div>
+        }
+      </div>
+    </section>
+  }
+}
+
+<!-- FAQ Section -->
+@if (pageContent.faqs && pageContent.faqs.length > 0) {
+  <section class="residential-sub-faq-section">
+    <div class="residential-sub-faq-container">
+      <h2 class="residential-sub-faq-title">Frequently Asked Questions</h2>
+      <div class="residential-sub-faq-list">
+        @for (faq of pageContent.faqs; track faq.question; let i = $index) {
+          <details class="residential-sub-faq-item" [open]="i === 0">
+            <summary class="residential-sub-faq-question">
+              <span class="residential-sub-faq-question-text">{{ faq.question }}</span>
+              <span class="residential-sub-faq-icon">
+                <svg
+                  class="residential-sub-faq-icon-open"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+                  ></path>
+                </svg>
+                <svg
+                  class="residential-sub-faq-icon-closed"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="residential-sub-faq-answer" [innerHTML]="(faq.answer | nl2br)"></div>
+          </details>
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<!-- Gallery Section using Gallery Component -->
+@if (pageContent.gallery && pageContent.gallery.length > 0) {
+  <app-gallery [images]="pageContent.gallery" title="PROJECTS"></app-gallery>
+}

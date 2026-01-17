@@ -1,0 +1,116 @@
+<!-- Header Section -->
+<section class="residential-sub-header-section">
+  <div class="residential-sub-header-container">
+    <h1 class="residential-sub-header-title">{{ pageContent.header.title }}</h1>
+    @if (pageContent.header.subtitle) {
+      <p class="residential-sub-header-subtitle">{{ pageContent.header.subtitle }}</p>
+    }
+  </div>
+</section>
+
+<!-- Hero Section -->
+@if (pageContent.hero) {
+  <section class="residential-sub-hero-section">
+    <div class="residential-sub-hero-container">
+      <div class="residential-sub-hero-content">
+        @if (pageContent.hero.title) {
+          <h2 class="residential-sub-hero-title">{{ pageContent.hero.title }}</h2>
+        }
+        @if (pageContent.hero.description) {
+          <div class="residential-sub-hero-description" [innerHTML]="(pageContent.hero.description | nl2br)"></div>
+        }
+        @if (pageContent.hero.buttonText && pageContent.hero.buttonLink) {
+          <a [routerLink]="pageContent.hero.buttonLink" class="residential-sub-hero-button">{{ pageContent.hero.buttonText }}</a>
+        }
+      </div>
+      @if (pageContent.hero.image) {
+        <div class="residential-sub-hero-image">
+          <img [src]="pageContent.hero.image" [alt]="pageContent.hero.title || 'Hero image'" loading="eager" />
+          <div class="residential-google-review">
+            <img src="/about-us/google-review.webp" alt="Google Review" loading="lazy" />
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+}
+
+<!-- Sections -->
+@if (pageContent.sections && pageContent.sections.length > 0) {
+  @for (section of pageContent.sections; track section.title || $index) {
+    <section class="residential-sub-section" [class.alternate-bg]="$index % 2 === 1">
+      <div class="residential-sub-section-container" [class.has-image-and-content]="section.image && section.description">
+        <!-- Sub Sections Grid (for Sport Accessories) -->
+        @if (section.subSections && section.subSections.length > 0) {
+          @if (section.title) {
+            <h2 class="residential-sub-section-title">{{ section.title }}</h2>
+          }
+          <div class="residential-sub-subsections-grid">
+            @for (subSection of section.subSections; track subSection.title || $index) {
+              <div class="residential-sub-subsection-card">
+                @if (subSection.image) {
+                  <div class="residential-sub-subsection-image">
+                    <img [src]="subSection.image" [alt]="subSection.title || 'Subsection image'" loading="lazy" />
+                  </div>
+                }
+                @if (subSection.title) {
+                  <h3 class="residential-sub-subsection-title">{{ subSection.title }}</h3>
+                }
+                @if (subSection.description) {
+                  <p class="residential-sub-subsection-description">{{ subSection.description }}</p>
+                }
+              </div>
+            }
+          </div>
+        }
+        
+        @if (section.image && section.description) {
+          <!-- Section with image and description side by side -->
+          <div class="residential-sub-section-image">
+            <img [src]="section.image" [alt]="section.title || 'Section image'" loading="lazy" />
+          </div>
+          <div class="residential-sub-section-content">
+            @if (section.title) {
+              <h2 class="residential-sub-section-title">{{ section.title }}</h2>
+            }
+            @if (section.description) {
+              <div class="residential-sub-section-description" [innerHTML]="(section.description | nl2br)"></div>
+            }
+            @if (section.buttonText && section.buttonLink) {
+              <div class="residential-sub-section-cta">
+                <a [routerLink]="section.buttonLink" class="residential-sub-section-button">{{ section.buttonText }}</a>
+              </div>
+            }
+          </div>
+        } @else {
+          @if (section.title) {
+            <h2 class="residential-sub-section-title">{{ section.title }}</h2>
+          }
+          @if (section.description) {
+            <div class="residential-sub-section-description" [innerHTML]="(section.description | nl2br)"></div>
+          }
+          @if (section.image) {
+            <div class="residential-sub-section-image">
+              <img [src]="section.image" [alt]="section.title || 'Section image'" loading="lazy" />
+            </div>
+          }
+          @if (section.buttonText && section.buttonLink) {
+            <div class="residential-sub-section-cta">
+              <a [routerLink]="section.buttonLink" class="residential-sub-section-button">{{ section.buttonText }}</a>
+            </div>
+          }
+        }
+      </div>
+    </section>
+  }
+}
+
+<!-- Decorative Image -->
+<div class="residential-decorative-image">
+  <img src="/residential/Group-36-1.webp" alt="Decorative element" loading="lazy" />
+</div>
+
+<!-- Gallery Section using Gallery Component -->
+@if (pageContent.gallery && pageContent.gallery.length > 0) {
+  <app-gallery [images]="pageContent.gallery" title="PROJECTS"></app-gallery>
+}

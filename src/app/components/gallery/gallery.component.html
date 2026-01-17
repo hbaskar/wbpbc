@@ -1,0 +1,60 @@
+<section class="gallery-section">
+  <div class="gallery-container">
+    @if (title) {
+      <h2 class="gallery-title">{{ title }}</h2>
+    }
+    <div class="gallery-grid">
+      @for (image of images; track $index; let i = $index) {
+        <div
+          class="gallery-item"
+          [class.visible]="visibleImages().has(i)"
+          (click)="openLightbox(i)"
+        >
+          <img
+            [src]="image"
+            [alt]="'Gallery image ' + (i + 1)"
+            class="gallery-image"
+            [attr.data-index]="i"
+            loading="lazy"
+          />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+@if (lightboxOpen()) {
+  <div class="lightbox-overlay" (click)="closeLightbox()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Close lightbox">
+        ×
+      </button>
+      <button class="lightbox-nav lightbox-prev" (click)="prevLightboxImage()" aria-label="Previous image">
+        ‹
+      </button>
+      <div class="lightbox-image-container">
+        <img
+          [src]="images[lightboxImageIndex()]"
+          [alt]="'Gallery image ' + (lightboxImageIndex() + 1)"
+          class="lightbox-image"
+        />
+      </div>
+      <button class="lightbox-nav lightbox-next" (click)="nextLightboxImage()" aria-label="Next image">
+        ›
+      </button>
+      <div class="lightbox-actions">
+        <button class="lightbox-action-btn" (click)="downloadImage()" aria-label="Download image">
+          <span>⬇</span> Download
+        </button>
+        <button class="lightbox-action-btn" (click)="shareImage()" aria-label="Share image">
+          <span>🔗</span> Share
+        </button>
+      </div>
+      <div class="lightbox-counter">
+        {{ lightboxImageIndex() + 1 }} / {{ images.length }}
+      </div>
+    </div>
+  </div>
+}
+

@@ -1,0 +1,147 @@
+<!-- Header Section -->
+<section class="residential-header-section">
+  <div class="residential-header-container">
+    <h1 class="residential-header-title">{{ pageContent.header.title }}</h1>
+    @if (pageContent.header.subtitle) {
+      <p class="residential-header-subtitle">{{ pageContent.header.subtitle }}</p>
+    }
+  </div>
+</section>
+
+<!-- Hero Section - Image Left, Content Right -->
+@if (pageContent.hero) {
+  <section class="residential-hero-section">
+    <div class="residential-hero-container">
+      @if (pageContent.hero.image) {
+        <div class="residential-hero-image">
+          <img [src]="pageContent.hero.image" [alt]="pageContent.hero.title || 'Hero image'" loading="eager" />
+          <div class="residential-google-review">
+            <img src="/about-us/google-review.webp" alt="Google Review" loading="lazy" />
+          </div>
+        </div>
+      }
+      <div class="residential-hero-content">
+        @if (pageContent.hero.title) {
+          <h2 class="residential-hero-title">{{ pageContent.hero.title }}</h2>
+        }
+        @if (pageContent.hero.description) {
+          <div class="residential-hero-description">
+            <p>Have you been searching for pickleball court construction near you, hoping to find a trusted team nearby? Look no further!</p>
+            <p>At We Build Pickleball Courts, we specialize in pickleball court construction and basketball court installation for residential properties. Whether you're a pickleball enthusiast or enjoy shooting hoops, we can design and build the perfect court to transform your outdoor living space.</p>
+          </div>
+        }
+        @if (pageContent.hero.buttonText && pageContent.hero.buttonLink) {
+          <a [routerLink]="pageContent.hero.buttonLink" class="residential-hero-button">{{ pageContent.hero.buttonText }}</a>
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<!-- Benefits Section -->
+<section class="residential-benefits-section">
+  <div class="residential-benefits-container">
+    <h2 class="residential-benefits-title">Why Homeowners Choose We Build Pickleball Courts</h2>
+    <div class="residential-hero-benefits">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h4 class="benefit-title">Experienced Pickleball Court Builders</h4>
+          <p class="benefit-description">Our skilled team specializes in designing and installing custom pickleball courts that fit your space and budget perfectly.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 9H21" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 3V21" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h4 class="benefit-title">Custom Basketball Court Installation</h4>
+          <p class="benefit-description">From full-sized courts to half-courts, we offer basketball court installation that maximizes your space while providing endless fun and functionality.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h4 class="benefit-title">Top-Quality Craftsmanship</h4>
+          <p class="benefit-description">We use premium materials that stand the test of time, ensuring your court stays in excellent condition for years to come.</p>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="benefit-content">
+          <h4 class="benefit-title">Lighting & Accessories</h4>
+          <p class="benefit-description">Add optional LED lighting for evening games or custom markings for a multi-sport experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+@if (pageContent.faqs && pageContent.faqs.length > 0) {
+  <section class="residential-faq-section">
+    <div class="residential-faq-container">
+      <h2 class="residential-faq-title">Frequently Asked Questions</h2>
+      <div class="residential-faq-list">
+        @for (faq of pageContent.faqs; track faq.question; let i = $index) {
+          <details class="residential-faq-item" [open]="i === 0">
+            <summary class="residential-faq-question">
+              <span class="residential-faq-question-text">{{ faq.question }}</span>
+              <span class="residential-faq-icon">
+                <svg
+                  class="residential-faq-icon-open"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+                  ></path>
+                </svg>
+                <svg
+                  class="residential-faq-icon-closed"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="residential-faq-answer" [innerHTML]="(faq.answer | nl2br)"></div>
+          </details>
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<!-- Gallery Section using Gallery Component -->
+@if (pageContent.gallery && pageContent.gallery.length > 0) {
+  <app-gallery [images]="pageContent.gallery" title="PROJECTS"></app-gallery>
+}
