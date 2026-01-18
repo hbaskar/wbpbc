@@ -1114,7 +1114,7 @@ export class ContentService {
       title: 'Backyard Courts for Your Home',
       description:
         'Have you been searching for pickleball court construction near you, hoping to find a trusted team nearby? Look no further!\n\nAt We Build Pickleball Courts, we specialize in pickleball court construction and basketball court installation for residential properties. Whether you\'re a pickleball enthusiast or enjoy shooting hoops, we can design and build the perfect court to transform your outdoor living space.\n\nWhy Homeowners Choose We Build Pickleball Courts:\n\n✅ Experienced Pickleball Court Builders: Our skilled team specializes in designing and installing custom pickleball courts that fit your space and budget perfectly.\n\n✅ Custom Basketball Court Installation: From full-sized courts to half-courts, we offer basketball court installation that maximizes your space while providing endless fun and functionality.\n\n✅ Top-Quality Craftsmanship: We use premium materials that stand the test of time, ensuring your court stays in excellent condition for years to come.\n\n✅ Lighting & Accessories: Add optional LED lighting for evening games or custom markings for a multi-sport experience.',
-      image: '/residential/wepik-bilal-project-20240108073632KDlv.jpeg',
+      image: 'residential/wepik-bilal-project-20240108073632KDlv.jpeg',
       buttonText: 'Get a Free, No-Obligation Consultation & Quote',
       buttonLink: '/contact-us',
     },
@@ -1146,11 +1146,11 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/residential/3DDEE4F1-04C0-4669-AF09-6DB99E5DEDEA-scaled-1-1.jpg',
-      '/residential/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
-      '/residential/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
-      '/residential/556465113_17951899245009322_4163966656285548438_n.jpg',
-      '/residential/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
+      'residential/3DDEE4F1-04C0-4669-AF09-6DB99E5DEDEA-scaled-1-1.jpg',
+      'residential/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
+      'residential/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
+      'residential/556465113_17951899245009322_4163966656285548438_n.jpg',
+      'residential/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
     ],
   };
 
@@ -1167,7 +1167,7 @@ export class ContentService {
       title: 'Professional Pickleball Court Construction and Installation',
       description:
         'A pickleball court in your backyard is more than just a place to play—it\'s where memories are created and laughter is shared. It\'s where family comes together. Whether it\'s a casual rally after dinner, a friendly match with neighbors, or teaching your kids a new skill, pickleball offers fun and fitness for everyone. Adding a court to your home encourages active living and togetherness, just steps from your door.\n\nAt We Build Pickleball Courts, we specialize in building custom pickleball courts for backyards. Our experienced team transforms outdoor spaces into courts designed around your area, your family\'s lifestyle, and your long-term vision. From compact layouts to full-size courts with buffer zones, we build your court with quality, care, and attention to detail—tailored just for you.',
-      image: '/residential/imgi_66_505163386_17939667633009322_340826664726100334_n.webp',
+      image: 'residential/imgi_66_505163386_17939667633009322_340826664726100334_n.webp',
       buttonText: 'Get a Free Quote',
       buttonLink: '/contact-us',
     },
@@ -1176,7 +1176,7 @@ export class ContentService {
         title: 'What Are The Dimensions Of A Pickleball Court?',
         description:
           'To get the most from your backyard pickleball court, selecting the right layout and size is essential. The standard court size is 20 feet wide by 44 feet long, perfect for both singles and doubles play. This setup provides enough room for an exciting, competitive game while fitting comfortably into most residential backyards.\n\nIf you have more space available, we recommend expanding to 30 feet by 60 feet. This option includes buffer zones around the court, giving players extra room to move safely and comfortably. These zones are ideal for active play, family matches, and enhancing the overall playing experience.\n\nWhether you prefer a compact setup or a full-size layout, a backyard pickleball court brings daily fun, fitness, and family connection. Our team handles everything—from design and layout to surfacing and finishing touches.\n\nLooking for pickleball court construction near you? At We Build Pickleball Courts, we\'re your trusted local partner for high-quality residential courts. We create beautiful, professional-grade courts tailored to your home and lifestyle.',
-        image: '/residential/dde4dbeb33096108fc901693249dad31cc73e90c.png',
+        image: 'residential/dde4dbeb33096108fc901693249dad31cc73e90c.png',
       },
     ],
     processSteps: [
@@ -1210,7 +1210,7 @@ export class ContentService {
       rating: '4.9',
       title: 'Top Rated Service 2025',
       verified: 'verified by Trustindex',
-      images: ['/residential/XMLID_11_.png', '/residential/Group-35.png'],
+      images: ['residential/XMLID_11_.png', 'residential/Group-35.png'],
     },
   };
 
@@ -1226,7 +1226,7 @@ export class ContentService {
       title: 'Custom Multi-Sport Courts The Perfect Backyard Upgrade',
       description:
         'The all-in-one backyard court for basketball, pickleball, and more. This multi-purpose court is the perfect addition to any outdoor space and a great way to get the whole family involved in some friendly competition.\n\nWhether you\'re looking for a new custom court or upgrading an existing space, We Build Pickleball Courts multi-sport court delivers unmatched fun, flexibility, and functionality. Enjoy a space that supports different sports without compromise—designed for high performance, maximum enjoyment and low maintenance.',
-      image: '/residential/imgi_31_505742772_17939667606009322_5116293362220830711_n.webp',
+      image: 'residential/imgi_31_505742772_17939667606009322_5116293362220830711_n.webp',
       buttonText: 'Book a Consultation',
       buttonLink: '/contact-us',
     },
@@ -1256,7 +1256,7 @@ export class ContentService {
         title: 'Endless Sports Options for the Whole Family',
         description:
           'A We Build Pickleball Courts multi-sport court offers the ultimate flexibility, allowing your family to enjoy multiple sports in one space. Whether it\'s a backyard basketball court, tennis, pickleball, or volleyball, our expertly designed outdoor courts provide a seamless playing surface for every game.\n\nWith clearly marked game lines and regulation-size custom layouts, our courts make switching between activities quick and easy. There\'s no need to choose just one—rotate between your favorite sports and keep everyone engaged year-round.\n\nComplete your dream backyard sports experience with professional hoops, adjustable nets, artificial turf, and integrated landscape design that brings it all together. Our courts are built for all skill levels—perfect for casual play, competitive games, or just staying active with family and friends.',
-        image: '/residential/262b069392b4b1d51c4d9a543fe4f3a9aef84571-e1758533569857.webp',
+        image: 'residential/262b069392b4b1d51c4d9a543fe4f3a9aef84571-e1758533569857.webp',
         buttonText: 'Book a Consultation',
         buttonLink: '/contact-us',
       },
@@ -1292,7 +1292,7 @@ export class ContentService {
       rating: '4.9',
       title: 'Top Rated Service 2025',
       verified: 'verified by Trustindex',
-      images: ['/residential/XMLID_11_.png', '/residential/Group-35.png'],
+      images: ['residential/XMLID_11_.png', 'residential/Group-35.png'],
     },
   };
 
@@ -1309,7 +1309,7 @@ export class ContentService {
       title: 'Professional Basketball Court Construction and Installation',
       description:
         'Transform your outdoor space into the ultimate play zone with a custom basketball court installation right in your own backyard. More than just a home upgrade, a residential court is your personal arena for shooting hoops, staying active, and creating lasting memories with family and friends. Whether it\'s a casual game with the kids or a friendly neighborhood match, your backyard can be the heart of the action.\n\nAt We Build Pickleball Courts, we specialize in high-quality, family-oriented basketball court installations that fit your space, style, and budget. Our courts are designed for fun and built to last—perfect for homes across the country.',
-      image: '/residential/e5eb271b-057f-4706-ab48-23b384a6561f.webp',
+      image: 'residential/e5eb271b-057f-4706-ab48-23b384a6561f.webp',
       buttonText: 'Book a Consultation',
       buttonLink: '/contact-us',
     },
@@ -1343,15 +1343,15 @@ export class ContentService {
         subSections: [
           {
             title: "25' x 25'\nMINI-COURT",
-            image: '/residential/imgi_45_448935930_1702172140618888_1385270773452713620_n.webp',
+            image: 'residential/imgi_45_448935930_1702172140618888_1385270773452713620_n.webp',
           },
           {
             title: "30' x 60'\nHALF-COURT",
-            image: '/residential/imgi_31_505742772_17939667606009322_5116293362220830711_n-1.webp',
+            image: 'residential/imgi_31_505742772_17939667606009322_5116293362220830711_n-1.webp',
           },
           {
             title: "94' x 50'\nFULL COURT",
-            image: '/residential/77f3f5508e54cc08ae120f20040a9360e1852f76.webp',
+            image: 'residential/77f3f5508e54cc08ae120f20040a9360e1852f76.webp',
           },
         ],
       },
@@ -1360,13 +1360,13 @@ export class ContentService {
         subSections: [
           {
             title: 'Nets and Hoops',
-            image: '/residential/e5ee523b1c0aacb8076a5632b43c66fed6aa2b53-3.png',
-            buttonLink: '/residential/hoops-nets',
+            image: 'residential/e5ee523b1c0aacb8076a5632b43c66fed6aa2b53-3.png',
+            buttonLink: 'residential/hoops-nets',
           },
           {
             title: 'Artificial Turf and Putting Greens',
-            image: '/residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM-1.jpeg',
-            buttonLink: '/residential/artificial-turf-putting-greens',
+            image: 'residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM-1.jpeg',
+            buttonLink: 'residential/artificial-turf-putting-greens',
           },
         ],
       },
@@ -1401,9 +1401,9 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/residential/imgi_45_448935930_1702172140618888_1385270773452713620_n.webp',
-      '/residential/imgi_31_505742772_17939667606009322_5116293362220830711_n-1.webp',
-      '/residential/77f3f5508e54cc08ae120f20040a9360e1852f76.webp',
+      'residential/imgi_45_448935930_1702172140618888_1385270773452713620_n.webp',
+      'residential/imgi_31_505742772_17939667606009322_5116293362220830711_n-1.webp',
+      'residential/77f3f5508e54cc08ae120f20040a9360e1852f76.webp',
     ],
   };
 
@@ -1419,7 +1419,7 @@ export class ContentService {
       title: 'Backyard Artificial Turf Installation: The Perfect Low-Maintenance Solution for Any Space',
       description:
         'Natural grass looks great—until it doesn\'t. Mowing, watering, and dealing with dead patches can quickly become a hassle. That\'s where artificial turf comes in. Whether you want to enhance your patio, surround your pickleball court, install a putting green, or eliminate lawn maintenance altogether, We Build Pickleball Courts has the perfect turf option for you.\n\nDifferent Turf Heights for Different Needs\nNot all turf is created equal. The best choice depends on how you plan to use it:\n\nShort & Dense (Putting Greens) – A smooth, tight-knit surface designed for golf enthusiasts who want a true roll.\n\nMedium-Pile (Patio & Landscaping) – The perfect balance of softness and durability, ideal for decorative outdoor spaces.\n\nHigh-Pile (Lawn Replacement) – A lush, natural-looking alternative to grass—without the watering, mowing, or upkeep.',
-      image: '/residential/imgi_45_476477702_17925679176009322_6409327478488036409_n.webp',
+      image: 'residential/imgi_45_476477702_17925679176009322_6409327478488036409_n.webp',
       buttonText: 'Book a Consultation',
       buttonLink: '/contact-us',
     },
@@ -1428,22 +1428,22 @@ export class ContentService {
         title: 'Where Can You Use Artificial Turf?',
         description:
           'Patio & Backyard Decor – Create a green, welcoming space that stays perfect year-round.\n\nSurrounding a Court – Keep the area around your pickleball or tennis court clean and polished.\n\nLawn Replacement – No more mowing, watering, or dealing with muddy patches.\n\nPutting Greens – Practice your short game with a professional-quality, customized green.',
-        image: '/residential/imgi_43_442419565_941023901153601_4916241557654404256_n.webp',
+        image: 'residential/imgi_43_442419565_941023901153601_4916241557654404256_n.webp',
       },
       {
         title: 'Why Choose We Build Pickleball Courts?',
         description:
           'We don\'t just sell turf—we help you find the best fit for your space. Our team offers custom consultations to match the right turf height, style, and installation to your needs.\n\nDurable, realistic turf options built for Houston\'s climate.\n\nProfessional installation that looks and feels natural.\n\nCustomer-focused service to bring your vision to life.\n\nLet\'s build something amazing together. Contact us today for a custom turf consultation with We Build Pickleball Courts.',
-        image: '/residential/imgi_68_429893760_17884873011009322_8576729911865715622_n.webp',
+        image: 'residential/imgi_68_429893760_17884873011009322_8576729911865715622_n.webp',
         buttonText: 'Book a Consultation',
         buttonLink: '/contact-us',
       },
     ],
     gallery: [
-      '/residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM-1.jpeg',
-      '/residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM.jpeg',
-      '/residential/imgi_68_429893760_17884873011009322_8576729911865715622_n.webp',
-      '/residential/imgi_43_442419565_941023901153601_4916241557654404256_n.webp',
+      'residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM-1.jpeg',
+      'residential/WhatsApp-Image-2025-11-02-at-11.24.12-PM.jpeg',
+      'residential/imgi_68_429893760_17884873011009322_8576729911865715622_n.webp',
+      'residential/imgi_43_442419565_941023901153601_4916241557654404256_n.webp',
     ],
   };
 
@@ -1460,7 +1460,7 @@ export class ContentService {
       title: 'Outdoor Court Fencing and Enclosures',
       description:
         'A backyard sports court isn\'t complete without a well-designed fencing system to enhance privacy, improve safety, and keep balls within the playing area. A properly installed fence adds both aesthetic appeal and functional value to your court, ensuring an optimal playing experience.\n\nFencing requirements vary based on the type of court and its location. For public courts, 10-foot-high fences are commonly installed to provide security and prevent unauthorized use. In residential settings, many homeowners prefer minimal fencing to maintain an open and modern look. Black fencing is the most popular choice due to its sleek, unobtrusive design, whereas green fencing is more visually prominent.\n\nFor a premium ball containment solution, soft netting systems offer a discreet and effective way to keep the game going without compromising the court\'s aesthetics. Whether for a home court or a professional facility, the right fencing ensures both functionality and style.',
-      image: '/residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+      image: 'residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
       buttonText: 'Book a Consultation',
       buttonLink: '/contact-us',
     },
@@ -1469,23 +1469,23 @@ export class ContentService {
         title: 'Choosing the Right Fence for Your Court',
         description:
           'A backyard or facility pickleball court isn\'t complete without proper fencing. Whether you want to keep the game contained, add security, or create a private playing space, the right fencing makes all the difference.\n\nChoosing the Right Fence for Your Court\nAt We Build Pickleball Courts, we offer fencing options to match your needs—whether you want a minimalist open feel or full ball containment.\n\n✔ 4ft, 6ft, 8ft, and 10ft fencing – Ideal for everything from open backyard courts to secured facilities.\n\n✔ Available in black vinyl (our most popular, blends seamlessly) or galvanized steel (classic and durable).\n\n✔ Custom installation to fit your space and playing style.\n\nWhat Fence Height Do You Need?\n\n4ft & 6ft – Great for residential courts with a more open aesthetic.\n8ft & 10ft – Perfect for keeping balls in play and adding extra security, ideal for clubs and commercial facilities.',
-        image: '/residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+        image: 'residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
       },
       {
         title: 'Why Choose We Build Pickleball Courts?',
         description:
           'With years of experience designing and building over 300 courts in Houston, we know what works. Our team ensures top-quality materials, expert installation, and a court that looks great for years to come.\n\nCustom solutions for residential and commercial courts.\n\nDurable materials designed for Houston\'s climate.\n\nProfessional, customer-focused service from start to finish.\n\nWant to talk sport accessory options? Contact us today to get started!',
-        image: '/residential/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
+        image: 'residential/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
         buttonText: 'Book a Consultation',
         buttonLink: '/contact-us',
       },
     ],
     gallery: [
-      '/residential/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
-      '/residential/imgi_52_443228339_413403268199606_6480298804640317143_n.webp',
-      '/residential/imgi_68_434570262_17888139771009322_9133723043087115051_n.webp',
-      '/residential/imgi_66_437714091_17888961453009322_565305388930151652_n.webp',
-      '/residential/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
+      'residential/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
+      'residential/imgi_52_443228339_413403268199606_6480298804640317143_n.webp',
+      'residential/imgi_68_434570262_17888139771009322_9133723043087115051_n.webp',
+      'residential/imgi_66_437714091_17888961453009322_565305388930151652_n.webp',
+      'residential/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
     ],
   };
 
@@ -1502,7 +1502,7 @@ export class ContentService {
       title: 'Premium quality installed sport accessories',
       description:
         'We\'re more than just a concrete and paint company. We\'re a full service sports experience provider. We sell and install high-quality hoops and nets in-ground permanent or rollaway temporarily solutions.',
-      image: '/residential/imgi_68_441622107_436100319002622_8314849039179710365_n.webp',
+      image: 'residential/imgi_68_441622107_436100319002622_8314849039179710365_n.webp',
       buttonText: 'Book a Consultation',
       buttonLink: '/contact-us',
     },
@@ -1513,22 +1513,22 @@ export class ContentService {
           {
             title: 'In-Ground Installed Basketball Goal',
             description: 'Padding, Adjustable, High-Quality',
-            image: '/residential/imgi_68_441622107_436100319002622_8314849039179710365_n.webp',
+            image: 'residential/imgi_68_441622107_436100319002622_8314849039179710365_n.webp',
           },
           {
             title: 'Rollaway Pickleball Net',
             description: 'Perfect for Multi-Courts',
-            image: '/residential/WhatsApp-Image-2025-11-04-at-2.31.59-PM.jpeg',
+            image: 'residential/WhatsApp-Image-2025-11-04-at-2.31.59-PM.jpeg',
           },
           {
             title: 'In-Ground with Poles Tennis Nets',
             description: 'Professional installation for tennis courts',
-            image: '/residential/WhatsApp-Image-2025-11-05-at-9.58.32-AM.jpeg',
+            image: 'residential/WhatsApp-Image-2025-11-05-at-9.58.32-AM.jpeg',
           },
           {
             title: 'Permanent Installed Pickleball Nets',
             description: 'Durable, regulation-size nets',
-            image: '/residential/imgi_59_514563725_17941705698009322_9004991449583410565_n.webp',
+            image: 'residential/imgi_59_514563725_17941705698009322_9004991449583410565_n.webp',
           },
         ],
       },
@@ -1536,19 +1536,19 @@ export class ContentService {
         title: 'Why Choose We Build Pickleball Courts?',
         description:
           'With years of experience designing and building over 300 courts in Houston, we know what works. Our team ensures top-quality materials, expert installation, and a court that looks great for years to come.\n\nCustom solutions for residential and commercial courts.\n\nDurable materials designed for Houston\'s climate.\n\nProfessional, customer-focused service from start to finish.\n\nWant to talk sport accessory options? Contact us today to get started!',
-        image: '/residential/imgi_19_556428991_17951899203009322_4912442090337726544_n-1.webp',
+        image: 'residential/imgi_19_556428991_17951899203009322_4912442090337726544_n-1.webp',
       },
     ],
     gallery: [
-      '/residential/imgi_59_514563725_17941705698009322_9004991449583410565_n.webp',
-      '/residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
-      '/residential/imgi_21_540066907_17948747679009322_6864728825337390653_n-1.webp',
-      '/residential/1a65cdb3-0558-4372-832a-a683d8c64356-1.jpeg',
-      '/residential/dji_0102-scaled-1.jpeg',
-      '/residential/IMG_7075-scaled-2.jpg',
-      '/residential/590f6683-8134-4621-81b6-236b821821fd.jpg',
-      '/residential/d5b1d514-8772-4369-8a2a-f3e7f4d209b9.jpg',
-      '/residential/imgi_47_449169480_460889309973909_3517765846346076211_n.webp',
+      'residential/imgi_59_514563725_17941705698009322_9004991449583410565_n.webp',
+      'residential/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+      'residential/imgi_21_540066907_17948747679009322_6864728825337390653_n-1.webp',
+      'residential/1a65cdb3-0558-4372-832a-a683d8c64356-1.jpeg',
+      'residential/dji_0102-scaled-1.jpeg',
+      'residential/IMG_7075-scaled-2.jpg',
+      'residential/590f6683-8134-4621-81b6-236b821821fd.jpg',
+      'residential/d5b1d514-8772-4369-8a2a-f3e7f4d209b9.jpg',
+      'residential/imgi_47_449169480_460889309973909_3517765846346076211_n.webp',
     ],
   };
 
@@ -1565,7 +1565,7 @@ export class ContentService {
       title: 'From the tiniest to the largest of projects',
       description:
         'At We Build Pickleball Courts, we have an in-house design team ready to prepare custom proposals and diagrams for any project needs. From mini-courts in residential backyards to custom driveway courts to large 6+ court outdoor/indoor facilities, we can fit the needs of any sport court project. Check out some examples below:',
-      image: '/residential/imgi_47_449169480_460889309973909_3517765846346076211_n.webp',
+      image: 'residential/imgi_47_449169480_460889309973909_3517765846346076211_n.webp',
     },
     sections: [
       {
@@ -1591,7 +1591,7 @@ export class ContentService {
       {
         title: 'LARGE FACILITY PROJECTS',
         description: 'Custom Outdoor Amenities for HOAs, Parks, Cities, and Country Clubs',
-        image: '/residential/dji_0102-scaled-1.jpeg',
+        image: 'residential/dji_0102-scaled-1.jpeg',
       },
       {
         title: 'Why Choose Us for Your Large Facility Projects?',
@@ -1622,9 +1622,9 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/residential/dji_0102-scaled-1.jpeg',
-      '/residential/539422028_17947883397009322_4188429181905877170_n.jpg',
-      '/residential/528346716_17945910594009322_3161130766354221433_n.jpg',
+      'residential/dji_0102-scaled-1.jpeg',
+      'residential/539422028_17947883397009322_4188429181905877170_n.jpg',
+      'residential/528346716_17945910594009322_3161130766354221433_n.jpg',
     ],
   };
 
@@ -1641,7 +1641,7 @@ export class ContentService {
       title: 'Pickleball Court Resurfacing',
       description:
         'Pickleball is the fastest-growing sport in America, and its popularity is booming across Texas. That means more people are looking for clean, safe, and professional pickleball courts. We Build Pickleball Courts is an award-winning company that specializes in pickleball court resurfacing and painting. Whether you need to upgrade an old court or turn a tennis court into a new backyard pickleball court, we\'ve got you covered.\n\nWe use high-quality materials and proven techniques to make your court look and play great. Our team focuses on every detail and takes pride in doing the job right. We also offer free estimates so you can get started with confidence.',
-      image: '/residential/6e47d76b-0b94-4e11-be8b-e12e9946f10f.webp',
+      image: 'residential/6e47d76b-0b94-4e11-be8b-e12e9946f10f.webp',
       buttonText: 'Let\'s Bring Your Court Back to Life',
       buttonLink: '/contact-us',
     },
@@ -1686,12 +1686,12 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/residential/328b3413-4ad9-4616-b3e8-6bb70231b035.webp',
-      '/residential/2da22cac-d6ed-4fff-a97e-69412bc9d629.webp',
-      '/residential/d58e04cd-a0bf-49e9-b957-9a2aeed644bd.webp',
-      '/residential/b77dfc3bf92e76210ed1f8ccebcc9bae231cddfa.webp',
-      '/residential/6b9fde776db85f61159ae0cda4ede90dcf477f29.webp',
-      '/residential/b35c8ab34004849801cf6c044a73996d3f90ecca.webp',
+      'residential/328b3413-4ad9-4616-b3e8-6bb70231b035.webp',
+      'residential/2da22cac-d6ed-4fff-a97e-69412bc9d629.webp',
+      'residential/d58e04cd-a0bf-49e9-b957-9a2aeed644bd.webp',
+      'residential/b77dfc3bf92e76210ed1f8ccebcc9bae231cddfa.webp',
+      'residential/6b9fde776db85f61159ae0cda4ede90dcf477f29.webp',
+      'residential/b35c8ab34004849801cf6c044a73996d3f90ecca.webp',
     ],
   };
 
@@ -1709,7 +1709,7 @@ export class ContentService {
       title: 'Commercial Court Construction',
       description:
         'At We Build Pickleball Court, we specialize in designing and constructing high-quality pickleball courts for HOAs, pickleball facilities, gyms, hotels, city parks, and more. Whether you\'re looking to add a court to a residential community, upgrade a sports facility, or create a public recreational space, we provide expert craftsmanship and seamless project management from start to finish.\n\nOur team ensures that every court meets professional standards, offering durable surfaces, customizable designs, and top-tier materials to enhance playability and longevity. From initial planning to final installation, we work closely with property managers, business owners, and city planners to create courts that bring communities together and elevate the game of pickleball.',
-      image: '/commercial/a20761ae12ed9b1953e431033c0dcca6e0e7c8b5.webp',
+      image: 'commercial/a20761ae12ed9b1953e431033c0dcca6e0e7c8b5.webp',
       buttonText: 'Schedule Your Consultation',
       buttonLink: '/contact-us',
     },
@@ -1721,9 +1721,9 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/commercial/ee0245849e7a2aae88748c18b41563cb76f688a9.webp',
-      '/commercial/97288cb256c283e7b29a2a457f879312abfff93d.webp',
-      '/commercial/025545fb7f4e68a6f353b5ca8c273959f5129f1a-1.webp',
+      'commercial/ee0245849e7a2aae88748c18b41563cb76f688a9.webp',
+      'commercial/97288cb256c283e7b29a2a457f879312abfff93d.webp',
+      'commercial/025545fb7f4e68a6f353b5ca8c273959f5129f1a-1.webp',
     ],
   };
 
@@ -1740,7 +1740,7 @@ export class ContentService {
       title: 'Indoor Pickleball Court Construction in Houston, Texas',
       description:
         'At We Build Pickleball, we create top-notch indoor pickleball courts tailored to your space, budget, and play style. Whether you want to transform a gym, set up in a warehouse, or build a private facility, we handle it all. This covers flooring, lighting, nets, and wall padding. We use high-quality materials and trusted methods, so our courts play like the pros and last for years.\n\nIf you\'re searching for indoor pickleball courts nearby, you\'ve found the right place. We provide custom solutions to your location, helping you through the construction process from start to finish.\n\nHomeowners, athletic clubs, schools, and businesses trust We Build Pickleball for court construction. Our clients appreciate our straightforward process, fair pricing, and careful attention to detail. If you\'re ready to build your own facility with the perfect playing experience, we can help make it happen.',
-      image: '/commercial/30d1062d81fc41e57bd2603d15816bee022eebf2.webp',
+      image: 'commercial/30d1062d81fc41e57bd2603d15816bee022eebf2.webp',
       buttonText: 'Get Your Indoor Pickleball Court Quote – It\'s Fast & Free',
       buttonLink: '/contact-us',
     },
@@ -1774,7 +1774,7 @@ export class ContentService {
         title: 'Why Choose We Build Pickleball for Pickleball Facility Construction?',
         description:
           'Thinking about adding indoor pickleball courts to your facility? Now\'s the time to build! From design to completion, we create high-quality courts that keep players coming back — rain or shine. Our team specializes in building indoor pickleball facilities in Houston, Texas, delivering durable, professional courts that help you attract more players and grow your business year-round.',
-        image: '/commercial/540678378_17948747688009322_4244788793269151873_n.jpg',
+        image: 'commercial/540678378_17948747688009322_4244788793269151873_n.jpg',
         buttonText: 'Contact us today for a free consultation and bring your indoor pickleball vision to life!',
         buttonLink: '/contact-us',
       },
@@ -1821,7 +1821,7 @@ export class ContentService {
       title: 'Court Resurfacing Services',
       description:
         'Searching for "tennis court resurfacing near me" or "pickleball court resurfacing near me"? You\'ve come to the right place. At We Build Pickleball, we specialize in resurfacing tennis, pickleball, basketball, and multi-sport courts for homeowners, schools, HOAs, parks, and sports facilities across the country.\n\nResurfacing isn\'t just about making your court look good—it\'s about restoring its performance, safety, and durability for years to come. Our expert team uses a 100% Acrylic Paint Crack Repair and Resurfacing System designed to deliver professional results on every project.',
-      image: '/commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1.jpg',
+      image: 'commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1.jpg',
       buttonText: 'Get Your Free Court Resurfacing Quote',
       buttonLink: '/contact-us',
     },
@@ -1833,7 +1833,7 @@ export class ContentService {
       },
       {
         title: 'Pickleball Court Resurfacing Transformation in Kingwood, Texas',
-        image: '/commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
+        image: 'commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
       },
     ],
     processSteps: [
@@ -1879,10 +1879,10 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
-      '/commercial/2da22cac-d6ed-4fff-a97e-69412bc9d629.jpg',
-      '/commercial/3aece311-bb66-493e-99cb-c20610aeaf22.jpg',
-      '/commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1-1.jpg',
+      'commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
+      'commercial/2da22cac-d6ed-4fff-a97e-69412bc9d629.jpg',
+      'commercial/3aece311-bb66-493e-99cb-c20610aeaf22.jpg',
+      'commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1-1.jpg',
     ],
   };
 
@@ -1899,30 +1899,30 @@ export class ContentService {
       title: 'Outdoor Court Fencing and Enclosures',
       description:
         'A backyard sports court isn\'t complete without a well-designed fencing system to enhance privacy, improve safety, and keep balls within the playing area. A properly installed fence adds both aesthetic appeal and functional value to your court, ensuring an optimal playing experience.\n\nFencing requirements vary based on the type of court and its location. For public courts, 10-foot-high fences are commonly installed to provide security and prevent unauthorized use. In residential settings, many homeowners prefer minimal fencing to maintain an open and modern look. Black fencing is the most popular choice due to its sleek, unobtrusive design, whereas green fencing is more visually prominent.\n\nFor a premium ball containment solution, soft netting systems offer a discreet and effective way to keep the game going without compromising the court\'s aesthetics. Whether for a home court or a professional facility, the right fencing ensures both functionality and style.',
-      image: '/commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+      image: 'commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
     },
     sections: [
       {
         title: 'Choosing the Right Fence for Your Court',
         description:
           'A backyard or facility pickleball court isn\'t complete without proper fencing. Whether you want to keep the game contained, add security, or create a private playing space, the right fencing makes all the difference.\n\nChoosing the Right Fence for Your Court\nAt We Build Pickleball Courts, we offer fencing options to match your needs—whether you want a minimalist open feel or full ball containment.\n\n✔ 4ft, 6ft, 8ft, and 10ft fencing – Ideal for everything from open backyard courts to secured facilities.\n\n✔ Available in black vinyl (our most popular, blends seamlessly) or galvanized steel (classic and durable).\n\n✔ Custom installation to fit your space and playing style.\n\nWhat Fence Height Do You Need?\n\n4ft & 6ft – Great for residential courts with a more open aesthetic.\n8ft & 10ft – Perfect for keeping balls in play and adding extra security, ideal for clubs and commercial facilities.',
-        image: '/commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+        image: 'commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
       },
       {
         title: 'Why Choose We Build Pickleball Courts?',
         description:
           'With years of experience designing and building over 300 courts in Houston, we know what works. Our team ensures top-quality materials, expert installation, and a court that looks great for years to come.\n\nCustom solutions for residential and commercial courts.\n\nDurable materials designed for Houston\'s climate.\n\nProfessional, customer-focused service from start to finish.\n\nWant to talk sport accessory options? Contact us today to get started!',
-        image: '/commercial/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
+        image: 'commercial/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
         buttonText: 'Schedule Your Consultation',
         buttonLink: '/contact-us',
       },
     ],
     gallery: [
-      '/commercial/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
-      '/commercial/imgi_52_443228339_413403268199606_6480298804640317143_n.webp',
-      '/commercial/imgi_68_434570262_17888139771009322_9133723043087115051_n.webp',
-      '/commercial/imgi_66_437714091_17888961453009322_565305388930151652_n.webp',
-      '/commercial/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
+      'commercial/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
+      'commercial/imgi_52_443228339_413403268199606_6480298804640317143_n.webp',
+      'commercial/imgi_68_434570262_17888139771009322_9133723043087115051_n.webp',
+      'commercial/imgi_66_437714091_17888961453009322_565305388930151652_n.webp',
+      'commercial/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
     ],
   };
 
@@ -1939,7 +1939,7 @@ export class ContentService {
       title: 'Convert Your Tennis Court into a Pickleball Court with Easy Line Markings',
       description:
         'You can add 1, 2, or even 4 pickleball courts to your existing tennis court or other concrete slabs for a cost-effective and efficient way to enjoy the game. At We Build Pickleball, we specialize in converting your existing courts with minimal disruption, offering the best value without needing a completely new setup.',
-      image: '/commercial/imgi_66_505163386_17939667633009322_340826664726100334_n.webp',
+      image: 'commercial/imgi_66_505163386_17939667633009322_340826664726100334_n.webp',
       buttonText: 'Get Your Free Court Resurfacing Quote',
       buttonLink: '/contact-us',
     },
@@ -1976,7 +1976,7 @@ export class ContentService {
         title: 'Perfect for:',
         description:
           'Private Homes – Turn your backyard tennis court into a multi-sport space with We Build Pickleball.\n\nHOAs & Communities – Offer both tennis and pickleball without taking up extra land.\n\nParks & Clubs – Attract more players by making your facilities more versatile with We Build Pickleball.',
-        image: '/commercial/14a3638b-4fd2-4582-abb0-7f13f82af69f.jpg',
+        image: 'commercial/14a3638b-4fd2-4582-abb0-7f13f82af69f.jpg',
         buttonText: 'Get Your Free Court Resurfacing Quote',
         buttonLink: '/contact-us',
       },
@@ -1989,12 +1989,12 @@ export class ContentService {
       },
     ],
     gallery: [
-      '/commercial/31a37568652205b3eba5f8811ed08adc99095907-1.png',
-      '/commercial/4a4baa25-4f2c-4ba4-964d-f4dca682fe7f.jpg',
-      '/commercial/d022b5b1-d723-44a9-8a1a-fef9759dfb0c.jpg',
-      '/commercial/imgi_21_540066907_17948747679009322_6864728825337390653_n-1.webp',
-      '/commercial/fadf7405-b4af-4d53-a229-3d8f49ec317e.jpg',
-      '/commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-1.jpg',
+      'commercial/31a37568652205b3eba5f8811ed08adc99095907-1.png',
+      'commercial/4a4baa25-4f2c-4ba4-964d-f4dca682fe7f.jpg',
+      'commercial/d022b5b1-d723-44a9-8a1a-fef9759dfb0c.jpg',
+      'commercial/imgi_21_540066907_17948747679009322_6864728825337390653_n-1.webp',
+      'commercial/fadf7405-b4af-4d53-a229-3d8f49ec317e.jpg',
+      'commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-1.jpg',
     ],
   };
 
@@ -2011,7 +2011,7 @@ export class ContentService {
       title: 'Tennis Court Construction',
       description:
         'We Build Pickleball, your trusted partner in sports construction, is dedicated to enhancing your facility with top-tier tennis court construction services. Whether you\'re a school, country club, or private entity looking to add a new tennis court, we understand the unique demands of the game and the importance of a high-quality surface. Our expert team brings years of experience, unwavering commitment to excellence, and a passion for the sport to every project.\n\nIf you\'ve been searching for a "tennis court near me," We Build Pickleball provides exceptional solutions tailored to your location and vision. We work with residential courts, commercial facilities, tennis clubs, and HOAs as a full-service tennis court construction company. We handle every aspect turn-key—from tennis court slab construction, full acrylic court coatings, chain-link fencing and gates, outdoor tennis court lights, and more.',
-      image: '/commercial/7e2f554e43c0154b233b5343abc85a5391be976a-1.webp',
+      image: 'commercial/7e2f554e43c0154b233b5343abc85a5391be976a-1.webp',
       buttonText: 'Find Out What Your Tennis Court Will Cost – No Charge',
       buttonLink: '/contact-us',
     },
@@ -2161,7 +2161,7 @@ export class ContentService {
       title: 'Why Choose Build My Courts for Tennis Court Resurfacing?',
       description:
         'We take pride in resurfacing tennis courts with care, precision, and lasting results. Whether you\'re dealing with cracks, worn-out surfaces, or need a full refresh, our team at We Build Pickleball is here to help. We work on all types of courts, including:\n\n• Asphalt courts\n• Existing surfaces\n• Concrete courts\n• Outdoor Tennis courts\n• Indoor Tennis courts\n• Tennis Court Repair and low spot patching\n• All Sport Surfaces',
-      image: '/commercial/78cca675781df9f1d0f4fd2826f21a9b2c54fd45-1.webp',
+      image: 'commercial/78cca675781df9f1d0f4fd2826f21a9b2c54fd45-1.webp',
       buttonText: 'Get Free Quote',
       buttonLink: '/contact-us',
     },
@@ -2180,7 +2180,7 @@ export class ContentService {
         title: 'Additional Benefit: Adding Pickleball Lines to a New Resurfaced Tennis Court',
         description:
           'Pickleball courts are smaller than tennis courts, so you can fit more than one pickleball court inside a single tennis court layout. A standard 120\'x60\' court can fit up to 4 pickleball courts. The process involves:\n\nMeasuring and marking the correct dimensions for pickleball courts.\n\nApplying durable, high-visibility lines that won\'t interfere with tennis play.\nCustomizing colors to differentiate between sports while keeping a clean look.\n\nAt We Build Pickleball, we ensure that your court is optimized for both tennis and pickleball, providing a multi-sport solution that maximizes space and functionality.',
-        image: '/commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-2.jpg',
+        image: 'commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-2.jpg',
       },
       {
         title: 'Cost To Resurface Tennis Court',
