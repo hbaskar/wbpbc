@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ContentService, ResidentialPageContent } from '../../../services/content.service';
+import { Nl2brPipe } from '../../../pipes/nl2br.pipe';
 
 @Component({
   selector: 'app-indoor-pickleball-court',
   standalone: true,
-  template: `
-    <div class="page-container">
-      <h1>Indoor Pickleball Court</h1>
-      <p>Content will be implemented later.</p>
-    </div>
-  `,
-  styles: [
-    `
-      .page-container {
-        padding: 2rem;
-      }
-    `,
-  ],
+  imports: [RouterModule, CommonModule, Nl2brPipe],
+  templateUrl: './indoor-pickleball-court.component.html',
+  styleUrl: './indoor-pickleball-court.component.scss',
 })
-export class IndoorPickleballCourtComponent {}
+export class IndoorPickleballCourtComponent {
+  pageContent: ResidentialPageContent;
 
+  constructor(public contentService: ContentService) {
+    this.pageContent = this.contentService.getCommercialIndoorPickleball();
+  }
+}

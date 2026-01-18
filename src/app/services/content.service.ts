@@ -1698,5 +1698,584 @@ export class ContentService {
   getResidentialPickleballResurfacing(): ResidentialPageContent {
     return this.residentialPickleballResurfacing;
   }
+
+  // Commercial Pages Data
+  private readonly commercialMain: ResidentialPageContent = {
+    header: {
+      title: 'Commercial Facilities',
+      subtitle: 'Professional court solutions for businesses, clubs, and facilities',
+    },
+    hero: {
+      title: 'Commercial Court Construction',
+      description:
+        'At We Build Pickleball Court, we specialize in designing and constructing high-quality pickleball courts for HOAs, pickleball facilities, gyms, hotels, city parks, and more. Whether you\'re looking to add a court to a residential community, upgrade a sports facility, or create a public recreational space, we provide expert craftsmanship and seamless project management from start to finish.\n\nOur team ensures that every court meets professional standards, offering durable surfaces, customizable designs, and top-tier materials to enhance playability and longevity. From initial planning to final installation, we work closely with property managers, business owners, and city planners to create courts that bring communities together and elevate the game of pickleball.',
+      image: '/commercial/a20761ae12ed9b1953e431033c0dcca6e0e7c8b5.webp',
+      buttonText: 'Schedule Your Consultation',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'Our Commercial Services',
+        description:
+          'We offer comprehensive commercial court construction and maintenance services:\n\n• Resurfacing\n• Tennis Courts\n• Pickleball Courts\n• Commercial-Grade Lighting\n• Fencing and Fence Gates\n• Preparing Existing Concrete Facilities for Sport-Court Paint',
+      },
+    ],
+    gallery: [
+      '/commercial/ee0245849e7a2aae88748c18b41563cb76f688a9.webp',
+      '/commercial/97288cb256c283e7b29a2a457f879312abfff93d.webp',
+      '/commercial/025545fb7f4e68a6f353b5ca8c273959f5129f1a-1.webp',
+    ],
+  };
+
+  getCommercialMain(): ResidentialPageContent {
+    return this.commercialMain;
+  }
+
+  private readonly commercialIndoorPickleball: ResidentialPageContent = {
+    header: {
+      title: 'Professional Indoor Pickleball Court Facility Builders',
+      subtitle: 'We specialize in indoor pickleball facility construction in Houston. From design to build-out, we create custom, turnkey pickleball centers for gyms, clubs, and sports complexes.',
+    },
+    hero: {
+      title: 'Indoor Pickleball Court Construction in Houston, Texas',
+      description:
+        'At We Build Pickleball, we create top-notch indoor pickleball courts tailored to your space, budget, and play style. Whether you want to transform a gym, set up in a warehouse, or build a private facility, we handle it all. This covers flooring, lighting, nets, and wall padding. We use high-quality materials and trusted methods, so our courts play like the pros and last for years.\n\nIf you\'re searching for indoor pickleball courts nearby, you\'ve found the right place. We provide custom solutions to your location, helping you through the construction process from start to finish.\n\nHomeowners, athletic clubs, schools, and businesses trust We Build Pickleball for court construction. Our clients appreciate our straightforward process, fair pricing, and careful attention to detail. If you\'re ready to build your own facility with the perfect playing experience, we can help make it happen.',
+      image: '/commercial/30d1062d81fc41e57bd2603d15816bee022eebf2.webp',
+      buttonText: 'Get Your Indoor Pickleball Court Quote – It\'s Fast & Free',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'Why Choose We Build Pickleball for Pickleball Facility Construction?',
+        items: [
+          {
+            title: 'Experience and Expertise',
+            description:
+              'With years of experience as a commercial pickleball court builder in Texas, Build Pickleball Courts has honed its skills in designing and constructing different hundreds of indoors courts and facilities.',
+          },
+          {
+            title: 'Expert Sports Surface Installation',
+            description:
+              'When it comes to delivering the perfect sports surface, especially an acrylic one, every detail matters. At We Build Pickleball Courts, with over 1,000 courts completed, we ensure that every step of the installation process is precise—from leveling and surfacing to in-ground pickleball net installation. Our expert team will help you choose the best surface options to meet your needs, ensuring your indoor or outdoor sports facility looks professional and performs at the highest level.',
+          },
+          {
+            title: 'Customized Court Design',
+            description:
+              'At We Build Pickleball Courts, we offer fully customizable court options for indoor sports facilities, whether you\'re building for pickleball, badminton, or a multi-use setup. From custom logos and high-quality fencing to net systems and lighting, we tailor every detail to bring your vision to life.\n\nOur team will guide you through the entire process—from court layout and color schemes to surface markings—ensuring a seamless, professional result that combines both performance and aesthetics.',
+          },
+          {
+            title: 'Turn-Key Design and Installation',
+            description:
+              'We handle everything from start to finish with our turn-key design and installation service. Our team helps you select the perfect court size, layout, and colors to fit your space. We also guide you in setting up fencing to ensure your court looks fantastic while providing the best functionality for both play and safety.',
+          },
+        ],
+      },
+      {
+        title: 'Why Choose We Build Pickleball for Pickleball Facility Construction?',
+        description:
+          'Thinking about adding indoor pickleball courts to your facility? Now\'s the time to build! From design to completion, we create high-quality courts that keep players coming back — rain or shine. Our team specializes in building indoor pickleball facilities in Houston, Texas, delivering durable, professional courts that help you attract more players and grow your business year-round.',
+        image: '/commercial/540678378_17948747688009322_4244788793269151873_n.jpg',
+        buttonText: 'Contact us today for a free consultation and bring your indoor pickleball vision to life!',
+        buttonLink: '/contact-us',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How much does it cost to build an indoor pickleball court?',
+        answer:
+          'The cost of an indoor pickleball court depends on factors like court size, materials, location, and any custom features you choose. At We Build Pickleball, we offer free, no-obligation estimates so you can plan your project with confidence.',
+      },
+      {
+        question: 'What size space do I need for an indoor pickleball court?',
+        answer:
+          'A standard indoor pickleball court measures 20 feet wide by 44 feet long for play, but additional space around the court is needed for safe movement—typically a minimum of 30 by 60 feet. At We Build Pickleball Courts, we can help assess your available space and design a court that fits perfectly within your environment.',
+      },
+      {
+        question: 'Can you install an indoor pickleball court in a gym or warehouse?',
+        answer:
+          'Yes, many of our indoor pickleball courts are built in existing gymnasiums, warehouses, and commercial spaces. We customize each project to suit the dimensions and conditions of your building, ensuring optimal layout, lighting, and performance for the best playing experience.',
+      },
+      {
+        question: 'What type of flooring is best for indoor pickleball courts?',
+        answer:
+          'The best flooring for indoor pickleball courts depends on usage and player comfort. Common options include cushioned athletic flooring, modular tile systems, or professional-grade hardwood. At We Build Pickleball Courts, we\'ll guide you in selecting the ideal surface based on your goals, preferences, and budget.',
+      },
+      {
+        question: 'How long does it take to build an indoor pickleball court?',
+        answer:
+          'Project timelines may vary, but most indoor pickleball courts are completed within a few weeks after design approval. At We Build Pickleball Courts, our team works efficiently to minimize downtime and deliver a high-quality, finished court on schedule.',
+      },
+    ],
+  };
+
+  getCommercialIndoorPickleball(): ResidentialPageContent {
+    return this.commercialIndoorPickleball;
+  }
+
+  private readonly commercialCourtResurfacing: ResidentialPageContent = {
+    header: {
+      title: 'Court Resurfacing',
+      subtitle: 'Pickleball, Tennis and more.',
+    },
+    hero: {
+      title: 'Court Resurfacing Services',
+      description:
+        'Searching for "tennis court resurfacing near me" or "pickleball court resurfacing near me"? You\'ve come to the right place. At We Build Pickleball, we specialize in resurfacing tennis, pickleball, basketball, and multi-sport courts for homeowners, schools, HOAs, parks, and sports facilities across the country.\n\nResurfacing isn\'t just about making your court look good—it\'s about restoring its performance, safety, and durability for years to come. Our expert team uses a 100% Acrylic Paint Crack Repair and Resurfacing System designed to deliver professional results on every project.',
+      image: '/commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1.jpg',
+      buttonText: 'Get Your Free Court Resurfacing Quote',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'Court Resurfacing Process',
+        description:
+          'Court resurfacing is essential to extend the life and performance of any sport surface. Whether you\'re maintaining a tennis, basketball, or pickleball court, our resurfacing process restores safety, traction, and professional-level playability. Here\'s how we do it:',
+      },
+      {
+        title: 'Pickleball Court Resurfacing Transformation in Kingwood, Texas',
+        image: '/commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
+      },
+    ],
+    processSteps: [
+      {
+        number: 1,
+        title: 'Surface Prep & Cleaning',
+        description:
+          'We begin by cleaning the surface thoroughly—removing dirt, debris, and any loose or peeling coatings. Water is applied to identify low spots, which are marked for repair to ensure a flat and even surface.',
+      },
+      {
+        number: 2,
+        title: 'Crack & Surface Repair',
+        description:
+          'Cracks and low spots are repaired using a 100% acrylic patch binder. This strengthens the surface, improves drainage, and prevents future damage—ensuring long-term durability for all types of courts.',
+      },
+      {
+        number: 3,
+        title: 'Color Coating & Line Striping',
+        description:
+          'After repairs, we apply multiple coats of high-quality acrylic resurfacer and paint. Once cured, we add custom game lines based on your sport—tennis, basketball, pickleball, or a multi-use layout.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How often should I resurface my court?',
+        answer:
+          'Most sports courts should be resurfaced every 4 to 7 years, depending on usage, climate, and surface condition. Regular resurfacing helps prevent costly repairs and extends the life of your court.',
+      },
+      {
+        question: 'How long does the resurfacing process take?',
+        answer:
+          'On average, a pickleball court resurfacing project takes between 2 to 5 days, depending on factors such as court size, weather conditions, and the extent of repairs required.',
+      },
+      {
+        question: 'What\'s included in your resurfacing service?',
+        answer:
+          'Every resurfacing project includes:\n\n• Crack repair\n• Surface preparation and cleaning\n• Application of 2–3 acrylic color coats\n• Custom game line painting\n• Final inspection and cleanup',
+      },
+      {
+        question: 'How do I get a resurfacing quote?',
+        answer:
+          'Simply reach out to us through our website or give us a call for a free consultation. We\'ll assess your court and provide a tailored resurfacing estimate to meet your specific needs.',
+      },
+    ],
+    gallery: [
+      '/commercial/a6f1d3752db37e7a2846b3ca4cc0accbd251fdfb.webp',
+      '/commercial/2da22cac-d6ed-4fff-a97e-69412bc9d629.jpg',
+      '/commercial/3aece311-bb66-493e-99cb-c20610aeaf22.jpg',
+      '/commercial/328b3413-4ad9-4616-b3e8-6bb70231b035-1-1.jpg',
+    ],
+  };
+
+  getCommercialCourtResurfacing(): ResidentialPageContent {
+    return this.commercialCourtResurfacing;
+  }
+
+  private readonly commercialCourtFencing: ResidentialPageContent = {
+    header: {
+      title: 'Court Fencing',
+      subtitle: 'Pickleball Court Fencing: Secure, Durable & Stylish',
+    },
+    hero: {
+      title: 'Outdoor Court Fencing and Enclosures',
+      description:
+        'A backyard sports court isn\'t complete without a well-designed fencing system to enhance privacy, improve safety, and keep balls within the playing area. A properly installed fence adds both aesthetic appeal and functional value to your court, ensuring an optimal playing experience.\n\nFencing requirements vary based on the type of court and its location. For public courts, 10-foot-high fences are commonly installed to provide security and prevent unauthorized use. In residential settings, many homeowners prefer minimal fencing to maintain an open and modern look. Black fencing is the most popular choice due to its sleek, unobtrusive design, whereas green fencing is more visually prominent.\n\nFor a premium ball containment solution, soft netting systems offer a discreet and effective way to keep the game going without compromising the court\'s aesthetics. Whether for a home court or a professional facility, the right fencing ensures both functionality and style.',
+      image: '/commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+    },
+    sections: [
+      {
+        title: 'Choosing the Right Fence for Your Court',
+        description:
+          'A backyard or facility pickleball court isn\'t complete without proper fencing. Whether you want to keep the game contained, add security, or create a private playing space, the right fencing makes all the difference.\n\nChoosing the Right Fence for Your Court\nAt We Build Pickleball Courts, we offer fencing options to match your needs—whether you want a minimalist open feel or full ball containment.\n\n✔ 4ft, 6ft, 8ft, and 10ft fencing – Ideal for everything from open backyard courts to secured facilities.\n\n✔ Available in black vinyl (our most popular, blends seamlessly) or galvanized steel (classic and durable).\n\n✔ Custom installation to fit your space and playing style.\n\nWhat Fence Height Do You Need?\n\n4ft & 6ft – Great for residential courts with a more open aesthetic.\n8ft & 10ft – Perfect for keeping balls in play and adding extra security, ideal for clubs and commercial facilities.',
+        image: '/commercial/imgi_53_540678378_17948747688009322_4244788793269151873_n.webp',
+      },
+      {
+        title: 'Why Choose We Build Pickleball Courts?',
+        description:
+          'With years of experience designing and building over 300 courts in Houston, we know what works. Our team ensures top-quality materials, expert installation, and a court that looks great for years to come.\n\nCustom solutions for residential and commercial courts.\n\nDurable materials designed for Houston\'s climate.\n\nProfessional, customer-focused service from start to finish.\n\nWant to talk sport accessory options? Contact us today to get started!',
+        image: '/commercial/imgi_48_484655693_17930334681009322_1001597747528906792_n.webp',
+        buttonText: 'Schedule Your Consultation',
+        buttonLink: '/contact-us',
+      },
+    ],
+    gallery: [
+      '/commercial/imgi_29_455111673_519862387152756_507185166191645006_n.webp',
+      '/commercial/imgi_52_443228339_413403268199606_6480298804640317143_n.webp',
+      '/commercial/imgi_68_434570262_17888139771009322_9133723043087115051_n.webp',
+      '/commercial/imgi_66_437714091_17888961453009322_565305388930151652_n.webp',
+      '/commercial/imgi_43_448417379_1218258926212757_5396553830350765637_n.webp',
+    ],
+  };
+
+  getCommercialCourtFencing(): ResidentialPageContent {
+    return this.commercialCourtFencing;
+  }
+
+  private readonly commercialAddingPickleballLines: ResidentialPageContent = {
+    header: {
+      title: 'Adding Pickleball Lines to Tennis Court',
+      subtitle: 'Got existing tennis courts and want to add pickleball?',
+    },
+    hero: {
+      title: 'Convert Your Tennis Court into a Pickleball Court with Easy Line Markings',
+      description:
+        'You can add 1, 2, or even 4 pickleball courts to your existing tennis court or other concrete slabs for a cost-effective and efficient way to enjoy the game. At We Build Pickleball, we specialize in converting your existing courts with minimal disruption, offering the best value without needing a completely new setup.',
+      image: '/commercial/imgi_66_505163386_17939667633009322_340826664726100334_n.webp',
+      buttonText: 'Get Your Free Court Resurfacing Quote',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'How Does It Work?',
+        description:
+          'Pickleball courts are smaller than tennis courts, meaning you can fit multiple pickleball courts within a standard tennis court layout. The process involves:\n\nMeasuring and marking the correct dimensions for pickleball courts.\n\nApplying durable, high-visibility lines that won\'t interfere with tennis play.\nCustomizing colors to differentiate between sports while keeping a clean look.\n\nAt We Build Pickleball, we make the conversion process simple and efficient, so you can maximize your court space for both tennis and pickleball.',
+        buttonText: 'Book a Consultation',
+        buttonLink: '/contact-us',
+      },
+      {
+        title: 'Why Add Pickleball Court Lines?',
+        items: [
+          {
+            title: 'Maximize Your Space',
+            description: 'Get more use out of your existing court without costly renovations.',
+          },
+          {
+            title: 'Multi-Sport Flexibility',
+            description: 'Enjoy both tennis and pickleball without sacrificing playability.',
+          },
+          {
+            title: 'Budget-Friendly',
+            description: 'A fraction of the cost compared to building a new dedicated pickleball court.',
+          },
+          {
+            title: 'Quick Installation',
+            description: 'We can add pickleball lines quickly, so you\'ll be playing in no time.',
+          },
+        ],
+      },
+      {
+        title: 'Perfect for:',
+        description:
+          'Private Homes – Turn your backyard tennis court into a multi-sport space with We Build Pickleball.\n\nHOAs & Communities – Offer both tennis and pickleball without taking up extra land.\n\nParks & Clubs – Attract more players by making your facilities more versatile with We Build Pickleball.',
+        image: '/commercial/14a3638b-4fd2-4582-abb0-7f13f82af69f.jpg',
+        buttonText: 'Get Your Free Court Resurfacing Quote',
+        buttonLink: '/contact-us',
+      },
+      {
+        title: 'Get Started Today',
+        description:
+          'At We Build Pickleball, we specialize in professional pickleball court line application, ensuring precise measurements and a clean, professional look. Whether you want a single court or multiple pickleball courts within your space, we can help.\n\nContact us today to bring pickleball to your court!',
+        buttonText: 'Get in Touch',
+        buttonLink: '/contact-us',
+      },
+    ],
+    gallery: [
+      '/commercial/31a37568652205b3eba5f8811ed08adc99095907-1.png',
+      '/commercial/4a4baa25-4f2c-4ba4-964d-f4dca682fe7f.jpg',
+      '/commercial/d022b5b1-d723-44a9-8a1a-fef9759dfb0c.jpg',
+      '/commercial/imgi_21_540066907_17948747679009322_6864728825337390653_n-1.webp',
+      '/commercial/fadf7405-b4af-4d53-a229-3d8f49ec317e.jpg',
+      '/commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-1.jpg',
+    ],
+  };
+
+  getCommercialAddingPickleballLines(): ResidentialPageContent {
+    return this.commercialAddingPickleballLines;
+  }
+
+  private readonly commercialTennisCourtConstruction: ResidentialPageContent = {
+    header: {
+      title: 'Tennis Court Construction',
+      subtitle: 'Tennis Courts Built Right the First Time | New Tennis Court Builds | Tennis Court Fencing, Lighting and More.',
+    },
+    hero: {
+      title: 'Tennis Court Construction',
+      description:
+        'We Build Pickleball, your trusted partner in sports construction, is dedicated to enhancing your facility with top-tier tennis court construction services. Whether you\'re a school, country club, or private entity looking to add a new tennis court, we understand the unique demands of the game and the importance of a high-quality surface. Our expert team brings years of experience, unwavering commitment to excellence, and a passion for the sport to every project.\n\nIf you\'ve been searching for a "tennis court near me," We Build Pickleball provides exceptional solutions tailored to your location and vision. We work with residential courts, commercial facilities, tennis clubs, and HOAs as a full-service tennis court construction company. We handle every aspect turn-key—from tennis court slab construction, full acrylic court coatings, chain-link fencing and gates, outdoor tennis court lights, and more.',
+      image: '/commercial/7e2f554e43c0154b233b5343abc85a5391be976a-1.webp',
+      buttonText: 'Find Out What Your Tennis Court Will Cost – No Charge',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'Why Choose We Build Pickleball for Pickleball Facility Construction?',
+        items: [
+          {
+            title: 'Experience and Expertise',
+            description:
+              'With years of experience as a tennis court contractor in Texas, We Build Pickleball has honed its skills in designing and constructing different types of tennis courts. Our team of professionals is well-versed in the latest techniques and trends in court surface materials and court design.',
+          },
+          {
+            title: 'Commitment to Quality Craftsmanship',
+            description:
+              'At We Build Pickleball Courts, we take immense pride in delivering exceptional craftsmanship with every project. As certified court builders, we prioritize attention to detail, using only the highest quality materials to ensure the longevity and durability of your pickleball court. Our focus on professional court construction guarantees optimal performance and appearance for every project we undertake.',
+          },
+          {
+            title: 'Customized Court Design',
+            description:
+              'At We Build Pickleball Courts, we understand that every client has unique requirements and preferences. We offer personalized court design services, allowing you to create a pickleball court that perfectly aligns with your vision and specifications—whether it\'s for private residences, recreational facilities, or large athletic complexes.',
+          },
+          {
+            title: 'Compliance and Permits',
+            description:
+              'Navigating local regulations and obtaining the necessary permits can be a complex process. As experienced pickleball court builders, We Build Pickleball Courts ensure complete compliance, making sure your new court meets all local regulations and zoning requirements.',
+          },
+        ],
+      },
+      {
+        title: 'Tennis Court Design and Planning',
+        description:
+          'We Build Pickleball takes a meticulous approach to tennis court design and planning, ensuring that every element contributes to an optimal playing experience, especially in new tennis court construction in Texas. The following aspects are carefully considered during the design phase:',
+        items: [
+          {
+            title: 'Customized Court Design',
+            description:
+              'At We Build Pickleball Courts, we understand that your playing area should reflect your unique style and preferences. That\'s why we offer customized court design services to help you create the perfect space. Choose from a variety of color schemes, logo placements, and other personalized features. We can even add multi-sport lines to transform your court into a versatile game space for different sports.',
+          },
+          {
+            title: 'Surface Options and Selection',
+            description:
+              'The surface of your pickleball court plays a crucial role in both gameplay and player safety. At We Build Pickleball Courts, we offer a range of surface options, including acrylic surfaces, synthetic turf, artificial turf, post-tension concrete, asphalt, concrete, and cushioned or padded surfaces. Our experts will guide you in selecting the most suitable coating system and surface, based on your specific needs, maintenance preferences, and long-term performance goals.',
+          },
+          {
+            title: 'Court Size and Dimensions',
+            description:
+              'At We Build Pickleball Courts, we ensure that the court size and dimensions meet official regulations while maximizing your available space. Our team will collaborate with you to determine the ideal court type and layout for your property, balancing performance with aesthetic appeal to create a functional and visually pleasing court.',
+          },
+          {
+            title: 'Fencing and Lighting Considerations',
+            description:
+              'Safety and functionality are our top priorities when it comes to fencing and lighting. At We Build Pickleball Courts, we offer durable fencing materials that not only enhance security but also improve the aesthetic appeal of your court. Additionally, our energy-efficient lighting solutions ensure you can enjoy nighttime play, while our smart drainage systems protect the integrity and quality of your court over time. Proper drainage helps prevent water accumulation, which can degrade playing conditions and lead to higher maintenance costs in the long run.',
+          },
+        ],
+      },
+      {
+        title: 'Construction Process',
+        description:
+          'We Build Pickleball is your premier choice as a pickleball court builder. Our experience, customization options, efficient project management, focus on customer satisfaction, and commitment to exceptional results set us apart from the competition.',
+      },
+    ],
+    processSteps: [
+      {
+        number: 1,
+        title: 'Introduction Phase',
+        description:
+          'Meet your Client Relations Manager to conduct survey of Athletic Courts location. Receive detailed quote, including scope of site preparation and evaluation for new construction feasibility. Our team walks you through a comprehensive guide to the tennis court building process.',
+      },
+      {
+        number: 2,
+        title: 'Pre-Construction Phase',
+        description: 'Our Client Relations Manager will hand off to the construction team. Preparing documents & permits.',
+      },
+      {
+        number: 3,
+        title: 'Construction Phase',
+        description:
+          'The site is prepped, materials are sourced, concrete slab or post-tension concrete is poured, flatwork is completed, followed by vertical work.',
+      },
+      {
+        number: 4,
+        title: 'Cure Times & Surface Preparation',
+        description:
+          'Lines are painted and the court is prepped for competition, following the highest standards of installation.',
+      },
+      {
+        number: 5,
+        title: 'Hand Over to Client',
+        description: 'The court is ready for matches and ready to impress any tennis enthusiast.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the ideal size and dimensions for a standard tennis court?',
+        answer:
+          'The standard size for a full-sized tennis court with full boundaries is 120 feet long by 60 feet wide. The actual tennis court playing area is 78 feet by 27 feet. However, We Build Pickleball can accommodate adjustments based on available space and specific types of court.',
+      },
+      {
+        question: 'Can you customize the design of the tennis court to fit our specific space and preferences?',
+        answer:
+          'We specialize in creating custom, high-quality pickleball court designs that perfectly suit your space and preferences. Our expert team works closely with you to craft a court layout that meets your exact needs. We also offer custom paint jobs to add both pickleball and basketball courts to the same space, giving you a versatile and functional multi-sport area!',
+      },
+      {
+        question: 'How long does it typically take to construct a pickleball court from start to finish?',
+        answer:
+          'The construction time for your pickleball court can vary depending on the scope and complexity of the project. On average, it takes approximately 4 to 6 weeks to complete a court from start to finish. Factors like location, soil conditions, and surface type can influence both the timeline and the overall cost.',
+      },
+      {
+        question: 'What kind of fencing is suitable for a pickleball court, and how does it contribute to player safety?',
+        answer:
+          'We offer a variety of fencing options for pickleball courts, including chain-link and mesh fencing. Fencing not only enhances player safety by keeping balls within the playing area, but it also creates a secure and protected environment for a better playing experience.',
+      },
+      {
+        question: 'Is it possible to install lighting for nighttime play on the pickleball court?',
+        answer:
+          'Yes, we offer professional lighting installation services for both pickleball and multi-sport courts, allowing for nighttime play. Our energy-efficient lighting solutions ensure optimal visibility, enabling you to enjoy your court well into the evening while keeping the energy costs low.',
+      },
+      {
+        question: 'Do you provide options for additional features, such as seating areas or player benches on the court?',
+        answer:
+          'Yes, we offer additional features such as seating areas, player benches, and other amenities to enhance the comfort and functionality of your pickleball court.',
+      },
+      {
+        question: 'Can you assist with converting an existing court into a pickleball court?',
+        answer:
+          'We have extensive experience in converting various types of courts into high-quality pickleball courts. Our expert team will assess the feasibility of the conversion and guide you through the entire process, ensuring minimal disruption to the existing court surface materials.',
+      },
+      {
+        question: 'What sets your pickleball court construction services apart from others in the industry?',
+        answer:
+          'Our pickleball court construction services stand out thanks to our experienced team, use of the highest quality materials, and commitment to long-lasting results. We ensure full compliance with local regulations and offer customized designs tailored to private residences, sports facilities, and more. At We Build Pickleball Courts, we are dedicated to meeting all your installation and ongoing maintenance needs with excellence.',
+      },
+    ],
+  };
+
+  getCommercialTennisCourtConstruction(): ResidentialPageContent {
+    return this.commercialTennisCourtConstruction;
+  }
+
+  private readonly commercialTennisCourtResurfacing: ResidentialPageContent = {
+    header: {
+      title: 'Tennis Court Resurfacing',
+      subtitle: 'Local Tennis Court Resurfacing Serving Houston and all of Texas',
+    },
+    hero: {
+      title: 'Why Choose Build My Courts for Tennis Court Resurfacing?',
+      description:
+        'We take pride in resurfacing tennis courts with care, precision, and lasting results. Whether you\'re dealing with cracks, worn-out surfaces, or need a full refresh, our team at We Build Pickleball is here to help. We work on all types of courts, including:\n\n• Asphalt courts\n• Existing surfaces\n• Concrete courts\n• Outdoor Tennis courts\n• Indoor Tennis courts\n• Tennis Court Repair and low spot patching\n• All Sport Surfaces',
+      image: '/commercial/78cca675781df9f1d0f4fd2826f21a9b2c54fd45-1.webp',
+      buttonText: 'Get Free Quote',
+      buttonLink: '/contact-us',
+    },
+    sections: [
+      {
+        title: 'What is Tennis Court Resurfacing?',
+        description:
+          'Resurfacing refers to the process of re-finishing and refurbishing the court\'s surface. It involves "painting" a tennis court with an acrylic resurfacer and color coating. For repairing existing tennis courts, resurfacing also includes filling in water accumulation areas. The type of court also affects the resurfacing process and determines which repair products are used.\nFor all hard court surfacings, acrylic coating is used, and sand is mixed in (up to 400lbs per 7200 SQFT court). For court repair involving surface cracks, patch binder is used.\nAt We Build Pickleball, we ensure that every resurfacing project is done with precision to extend the life of your court and enhance playability.',
+      },
+      {
+        title: 'The Process of Resurfacing',
+        description:
+          'Resurfacing tennis courts becomes necessary to maintain the quality and performance of tennis courts. The resurfacing process typically involves the following steps:',
+      },
+      {
+        title: 'Additional Benefit: Adding Pickleball Lines to a New Resurfaced Tennis Court',
+        description:
+          'Pickleball courts are smaller than tennis courts, so you can fit more than one pickleball court inside a single tennis court layout. A standard 120\'x60\' court can fit up to 4 pickleball courts. The process involves:\n\nMeasuring and marking the correct dimensions for pickleball courts.\n\nApplying durable, high-visibility lines that won\'t interfere with tennis play.\nCustomizing colors to differentiate between sports while keeping a clean look.\n\nAt We Build Pickleball, we ensure that your court is optimized for both tennis and pickleball, providing a multi-sport solution that maximizes space and functionality.',
+        image: '/commercial/d5b1d514-8772-4369-8a2a-f3e7f4d209b9-2.jpg',
+      },
+      {
+        title: 'Cost To Resurface Tennis Court',
+        description:
+          'The cost of resurfacing tennis courts can vary. It depends on the court size, surface type, how much repair is needed, and where you\'re located. In most cases, resurfacing in the U.S. costs anywhere from a few thousand dollars to over ten thousand, based on the number of layers and coatings used.',
+      },
+      {
+        title: 'When is Tennis Court Resurfacing Necessary?',
+        description:
+          'Resurfacing is part the regular maintenance of a court. The more regular use a acrylic surface gets, the more often it needs to be serviced.',
+        items: [
+          {
+            title: 'Aging and Deterioration',
+            description:
+              'As tennis courts age, they develop birdbaths, low spots, cracks, and color fading. These birdbaths allow water to pool over time, causing further damage and staining the acrylic paint surface. Resurfacing enhances longevity and performance, with line paint and court color staying bright, ensuring a more durable and aesthetically pleasing court.',
+          },
+          {
+            title: 'Cracks and Structural Damage',
+            description:
+              'Cracks in the court surface not only affect the aesthetics but also create tripping hazards. Resurfacing repairs these cracks, ensuring a smooth and safe playing surface. Patch binder is applied to fill in the cracks, helping to prevent further damage and maintain the integrity of the new sport surface.',
+          },
+          {
+            title: 'Fading Color and Line Markings',
+            description:
+              'Over time, the colors and line paint on your court may fade due to sun exposure, weather conditions, or frequent use. Resurfacing is the most effective solution for this. Every tennis court resurfacing includes a fresh coat of paint, improving visibility and enhancing the overall appearance of your court.',
+          },
+          {
+            title: 'Performance and Playability',
+            description:
+              'Cracks, low spots, and worn areas can disrupt the game by causing unpredictable bounces, slower play, and difficulty moving. Resurfacing restores a smooth, even surface for enhanced performance.\n\nWith years of experience, we expertly repair birdbaths, low spots, and hairline cracks using professional-grade patch binder. This ensures your entire court is level, providing a consistent and high-quality playing experience.',
+          },
+        ],
+      },
+      {
+        title: 'How much does it cost to resurface a tennis court ?',
+        buttonText: 'Get Free Quote',
+        buttonLink: '/contact-us',
+      },
+      {
+        title: 'Who Do We Serve?',
+        description:
+          'We Build Pickleball offers tennis court resurfacing for all types of clients. We resurface commercial courts at schools, gyms, and tennis centers. We work with public facilities like parks and city-run courts. We help private homeowners refresh or upgrade their backyard tennis courts. And we partner with country clubs to keep their courts in top shape for members.',
+      },
+    ],
+    processSteps: [
+      {
+        number: 1,
+        title: 'Scraping and Debris Removal',
+        description:
+          'Meet your Client Relations Manager. They will help survey the pickleball court location. Together, you can select the best court dimensions. You will then receive a detailed quote based on square footage.',
+      },
+      {
+        number: 2,
+        title: 'Crack Repair and Low Spots',
+        description:
+          'Our Client Relations Manager will hand off to the construction team. Preparing documents & permits as well as a custom pickleball court diagram.',
+      },
+      {
+        number: 3,
+        title: 'Painting, Line Striping',
+        description:
+          'In the final stage, we start the full surfacing process. First, we apply a black primer to help the coating stick. Then we add six total layers of resurfacer and color. Once that\'s done, we paint the game lines—whether it\'s for tennis, pickleball, or a multi-sport court.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How much does it cost to resurface a tennis court in the US?',
+        answer:
+          'The cost to resurface a tennis court varies based on factors like size, surface type, the extent of repairs needed, and your location. On average, most resurfacing projects range from a few thousand to several tens of thousands of dollars, depending on these variables.',
+      },
+      {
+        question: 'How to repair the tennis court surface?',
+        answer:
+          'The repair method varies based on the type of damage. Minor cracks can be filled, but larger issues may require patching or a full resurfacing. It\'s recommended to consult a professional to determine the best repair solution for your court.',
+      },
+      {
+        question: 'What is an acrylic tennis court?',
+        answer:
+          'An acrylic tennis court is a hard court constructed on a concrete or asphalt foundation. A smooth acrylic coating is then applied to provide a durable, even surface. This type of court ensures consistent ball bounce and dependable performance for players.',
+      },
+      {
+        question: 'How long does acrylic coating last?',
+        answer:
+          'The lifespan of an acrylic coating on a tennis court depends on factors like usage, maintenance, and climate. Typically, it lasts between 4 to 8 years before resurfacing or maintenance is needed.',
+      },
+      {
+        question: 'How long does it take to resurface a tennis court or multiple courts?',
+        answer:
+          'For smaller projects, like resurfacing a single tennis court, the process typically takes 3-4 days. Adding extra courts generally adds only one more day per court, as some parts of the resurfacing can be done simultaneously, reducing paint drying time.',
+      },
+    ],
+  };
+
+  getCommercialTennisCourtResurfacing(): ResidentialPageContent {
+    return this.commercialTennisCourtResurfacing;
+  }
 }
 

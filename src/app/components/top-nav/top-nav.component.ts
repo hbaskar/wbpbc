@@ -58,17 +58,20 @@ export class TopNavComponent implements OnInit {
     }
   }
 
-  handleDropdownClick(item: NavigationItem, event: Event): void {
-    const target = event.target as HTMLElement;
-    const isArrowClick = target.closest('.dropdown-arrow') || target.closest('svg');
+  handleLinkClick(item: NavigationItem, event: Event): void {
+    // Check if we're on mobile (screen width <= breakpoint-lg)
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 992; // $breakpoint-lg
     
-    // If clicking on arrow, toggle dropdown and prevent navigation
-    if (isArrowClick) {
-      event.preventDefault();
-      this.toggleDropdown(item.label, event);
+    if (isMobile) {
+      // On mobile: clicking the link text navigates to the page
+      // Close mobile menu after navigation
+      this.isMobileMenuOpen.set(false);
+      this.activeDropdown.set(null);
+      // Let routerLink handle navigation - don't prevent default
+    } else {
+      // On desktop: allow normal navigation, hover handles dropdown
+      // Don't prevent default - let routerLink work normally
     }
-    // If clicking on text, allow navigation (routerLink will handle it)
-    // On desktop, dropdown shows on hover anyway
   }
 
   closeDropdown(): void {

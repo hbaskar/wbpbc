@@ -1,8 +1,9 @@
 @use '../../../../styles/variables.scss' as *;
+@use 'sass:color';
 
 .residential-sub-header-section {
   padding: $spacing-5xl $spacing-lg;
-  background: linear-gradient(135deg, $primary-color 0%, darken($primary-color, 10%) 50%, $secondary-color 100%);
+  background: linear-gradient(135deg, $primary-color 0%, color.adjust($primary-color, $lightness: -10%) 50%, $secondary-color 100%);
   color: $background-white;
   text-align: center;
   position: relative;
@@ -13,10 +14,15 @@
     position: absolute;
     top: -50%;
     right: -10%;
-    width: 500px;
-    height: 500px;
+    width: min(500px, 100vw);
+    height: min(500px, 100vw);
     background: radial-gradient(circle, rgba(114, 253, 2, 0.1) 0%, transparent 70%);
     border-radius: 50%;
+
+    @media (max-width: $breakpoint-md) {
+      width: min(300px, 80vw);
+      height: min(300px, 80vw);
+    }
   }
 
   &::after {
@@ -24,10 +30,15 @@
     position: absolute;
     bottom: -30%;
     left: -5%;
-    width: 400px;
-    height: 400px;
+    width: min(400px, 100vw);
+    height: min(400px, 100vw);
     background: radial-gradient(circle, rgba(114, 253, 2, 0.08) 0%, transparent 70%);
     border-radius: 50%;
+
+    @media (max-width: $breakpoint-md) {
+      width: min(250px, 70vw);
+      height: min(250px, 70vw);
+    }
   }
 }
 
@@ -134,7 +145,7 @@
   }
 
   &:hover {
-    background: darken(#72fd02, 10%);
+    background: color.adjust(#72fd02, $lightness: -10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(114, 253, 2, 0.3);
   }
@@ -440,7 +451,7 @@ details[open] .residential-sub-faq-icon {
 // Items Grid (for What Makes Us Different)
 .residential-sub-items-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: $spacing-2xl;
   margin-top: $spacing-2xl;
 
@@ -481,6 +492,11 @@ details[open] .residential-sub-faq-icon {
     height: 200px;
     background: radial-gradient(circle, rgba(114, 253, 2, 0.08) 0%, transparent 70%);
     border-radius: 50%;
+
+    @media (max-width: $breakpoint-md) {
+      width: min(250px, 70vw);
+      height: min(250px, 70vw);
+    }
     transition: transform $transition-slow;
     opacity: 0;
   }
@@ -541,7 +557,7 @@ details[open] .residential-sub-faq-icon {
   transition: all $transition-base;
 
   &:hover {
-    background: darken(#72fd02, 10%);
+    background: color.adjust(#72fd02, $lightness: -10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(114, 253, 2, 0.3);
   }

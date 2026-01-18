@@ -1,0 +1,58 @@
+<!-- Header Section -->
+<section class="commercial-header-section">
+  <div class="commercial-header-container">
+    <h1 class="commercial-header-title">{{ pageContent.header.title }}</h1>
+    @if (pageContent.header.subtitle) {
+      <p class="commercial-header-subtitle">{{ pageContent.header.subtitle }}</p>
+    }
+  </div>
+</section>
+
+<!-- Hero Section - Image Left, Content Right -->
+@if (pageContent.hero) {
+  <section class="commercial-hero-section">
+    <div class="commercial-hero-container">
+      @if (pageContent.hero.image) {
+        <div class="commercial-hero-image">
+          <img [src]="pageContent.hero.image" [alt]="pageContent.hero.title || 'Hero image'" loading="eager" />
+          <div class="commercial-google-review">
+            <img src="/about-us/google-review.webp" alt="Google Review" loading="lazy" />
+          </div>
+        </div>
+      }
+      <div class="commercial-hero-content">
+        @if (pageContent.hero.title) {
+          <h2 class="commercial-hero-title">{{ pageContent.hero.title }}</h2>
+        }
+        @if (pageContent.hero.description) {
+          <div class="commercial-hero-description" [innerHTML]="(pageContent.hero.description | nl2br)"></div>
+        }
+        @if (pageContent.hero.buttonText && pageContent.hero.buttonLink) {
+          <a [routerLink]="pageContent.hero.buttonLink" class="commercial-hero-button">{{ pageContent.hero.buttonText }}</a>
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<!-- Sections -->
+@if (pageContent.sections && pageContent.sections.length > 0) {
+  @for (section of pageContent.sections; track section.title || $index) {
+    <section class="commercial-section" [class.alternate-bg]="$index % 2 === 1">
+      <div class="commercial-section-container">
+        @if (section.title) {
+          <h2 class="commercial-section-title">{{ section.title }}</h2>
+        }
+        @if (section.description) {
+          <div class="commercial-section-description" [innerHTML]="(section.description | nl2br)"></div>
+        }
+      </div>
+    </section>
+  }
+}
+
+<!-- Gallery Section using Gallery Component -->
+@if (pageContent.gallery && pageContent.gallery.length > 0) {
+  <app-gallery [images]="pageContent.gallery" title="PROJECTS"></app-gallery>
+}
+

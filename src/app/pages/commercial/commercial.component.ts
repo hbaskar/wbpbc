@@ -1,84 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ContentService } from '../../services/content.service';
+import { CommonModule } from '@angular/common';
+import { ContentService, ResidentialPageContent } from '../../services/content.service';
+import { Nl2brPipe } from '../../pipes/nl2br.pipe';
+import { GalleryComponent } from '../../components/gallery/gallery.component';
 
 @Component({
   selector: 'app-commercial',
   standalone: true,
-  imports: [RouterModule],
-  template: `
-    <div class="page-container">
-      <h1 class="page-title">Commercial Services</h1>
-      <p class="page-description">
-        Professional court solutions for businesses, clubs, and facilities.
-      </p>
-      <div class="services-grid">
-        @for (link of commercialLinks; track link.route) {
-          <a [routerLink]="link.route" class="service-card">
-            <h3>{{ link.label }}</h3>
-          </a>
-        }
-      </div>
-    </div>
-  `,
-  styles: [
-    `
-      .page-container {
-        padding: 4rem 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .page-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: #333;
-      }
-
-      .page-description {
-        font-size: 1.25rem;
-        color: #666;
-        margin-bottom: 3rem;
-        line-height: 1.6;
-      }
-
-      .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 2rem;
-      }
-
-      .service-card {
-        background-color: #fff;
-        border: 1px solid #e0e0e0;
-        border-radius: 0.5rem;
-        padding: 2rem;
-        text-decoration: none;
-        color: #333;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-        &:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          border-color: #007bff;
-        }
-
-        h3 {
-          font-size: 1.25rem;
-          font-weight: 600;
-          margin: 0;
-        }
-      }
-    `,
-  ],
+  imports: [RouterModule, CommonModule, Nl2brPipe, GalleryComponent],
+  templateUrl: './commercial.component.html',
+  styleUrl: './commercial.component.scss',
 })
 export class CommercialComponent {
-  commercialLinks: { label: string; route: string }[] = [];
+  pageContent: ResidentialPageContent;
 
-  constructor(private contentService: ContentService) {
-    this.commercialLinks = this.contentService.getFooterCommercialLinks();
+  constructor(public contentService: ContentService) {
+    this.pageContent = this.contentService.getCommercialMain();
   }
 }
-

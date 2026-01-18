@@ -1,0 +1,146 @@
+<!-- Header Section -->
+<section class="commercial-sub-header-section">
+  <div class="commercial-sub-header-container">
+    <h1 class="commercial-sub-header-title">{{ pageContent.header.title }}</h1>
+    @if (pageContent.header.subtitle) {
+      <p class="commercial-sub-header-subtitle">{{ pageContent.header.subtitle }}</p>
+    }
+  </div>
+</section>
+
+<!-- Hero Section -->
+@if (pageContent.hero) {
+  <section class="commercial-sub-hero-section">
+    <div class="commercial-sub-hero-container">
+      <div class="commercial-sub-hero-content">
+        @if (pageContent.hero.title) {
+          <h2 class="commercial-sub-hero-title">{{ pageContent.hero.title }}</h2>
+        }
+        @if (pageContent.hero.description) {
+          <div class="commercial-sub-hero-description" [innerHTML]="(pageContent.hero.description | nl2br)"></div>
+        }
+        @if (pageContent.hero.buttonText && pageContent.hero.buttonLink) {
+          <a [routerLink]="pageContent.hero.buttonLink" class="commercial-sub-hero-button">{{ pageContent.hero.buttonText }}</a>
+        }
+      </div>
+      @if (pageContent.hero.image) {
+        <div class="commercial-sub-hero-image">
+          <img [src]="pageContent.hero.image" [alt]="pageContent.hero.title || 'Hero image'" loading="eager" />
+          <div class="commercial-google-review">
+            <img src="/about-us/google-review.webp" alt="Google Review" loading="lazy" />
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+}
+
+<!-- Sections -->
+@if (pageContent.sections && pageContent.sections.length > 0) {
+  @for (section of pageContent.sections; track section.title || $index) {
+    <section class="commercial-sub-section" [class.alternate-bg]="$index % 2 === 1">
+      <div class="commercial-sub-section-container">
+        @if (section.title) {
+          <h2 class="commercial-sub-section-title">{{ section.title }}</h2>
+        }
+        
+        @if (section.image && section.description) {
+          <div class="commercial-sub-section-content-grid">
+            <div class="commercial-sub-section-image">
+              <img [src]="section.image" [alt]="section.title || 'Section image'" loading="lazy" />
+            </div>
+            <div class="commercial-sub-section-text">
+              @if (section.description) {
+                <div class="commercial-sub-section-description" [innerHTML]="(section.description | nl2br)"></div>
+              }
+              @if (section.buttonText && section.buttonLink) {
+                <div class="commercial-sub-section-cta">
+                  <a [routerLink]="section.buttonLink" class="commercial-sub-section-button">{{ section.buttonText }}</a>
+                </div>
+              }
+            </div>
+          </div>
+        } @else {
+          @if (section.description) {
+            <div class="commercial-sub-section-description" [innerHTML]="(section.description | nl2br)"></div>
+          }
+          
+          @if (section.image) {
+            <div class="commercial-sub-section-image">
+              <img [src]="section.image" [alt]="section.title || 'Section image'" loading="lazy" />
+            </div>
+          }
+          
+          @if (section.buttonText && section.buttonLink) {
+            <div class="commercial-sub-section-cta">
+              <a [routerLink]="section.buttonLink" class="commercial-sub-section-button">{{ section.buttonText }}</a>
+            </div>
+          }
+        }
+        
+        <!-- Items Grid -->
+        @if (section.items && section.items.length > 0) {
+          <div class="commercial-sub-items-grid">
+            @for (item of section.items; track item.title) {
+              <div class="commercial-sub-item-card">
+                <h3 class="commercial-sub-item-title">{{ item.title }}</h3>
+                <p class="commercial-sub-item-description" [innerHTML]="(item.description | nl2br)"></p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </section>
+  }
+}
+
+<!-- FAQ Section -->
+@if (pageContent.faqs && pageContent.faqs.length > 0) {
+  <section class="commercial-sub-faq-section">
+    <div class="commercial-sub-faq-container">
+      <h2 class="commercial-sub-faq-title">Frequently Asked Questions</h2>
+      <div class="commercial-sub-faq-list">
+        @for (faq of pageContent.faqs; track faq.question; let i = $index) {
+          <details class="commercial-sub-faq-item" [open]="i === 0">
+            <summary class="commercial-sub-faq-question">
+              <span class="commercial-sub-faq-question-text">{{ faq.question }}</span>
+              <span class="commercial-sub-faq-icon">
+                <svg
+                  class="commercial-sub-faq-icon-open"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+                  ></path>
+                </svg>
+                <svg
+                  class="commercial-sub-faq-icon-closed"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 320 512"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  ></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="commercial-sub-faq-answer" [innerHTML]="(faq.answer | nl2br)"></div>
+          </details>
+        }
+      </div>
+    </div>
+  </section>
+}
+
+
+<!-- Gallery Section using Gallery Component -->
+@if (pageContent.gallery && pageContent.gallery.length > 0) {
+  <app-gallery [images]="pageContent.gallery" title="PROJECTS"></app-gallery>
+}

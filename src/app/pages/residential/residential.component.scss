@@ -14,10 +14,15 @@
     position: absolute;
     top: -50%;
     right: -10%;
-    width: 500px;
-    height: 500px;
+    width: min(500px, 100vw);
+    height: min(500px, 100vw);
     background: radial-gradient(circle, rgba(114, 253, 2, 0.1) 0%, transparent 70%);
     border-radius: 50%;
+
+    @media (max-width: $breakpoint-md) {
+      width: min(300px, 80vw);
+      height: min(300px, 80vw);
+    }
   }
 
   &::after {
@@ -25,10 +30,15 @@
     position: absolute;
     bottom: -30%;
     left: -5%;
-    width: 400px;
-    height: 400px;
+    width: min(400px, 100vw);
+    height: min(400px, 100vw);
     background: radial-gradient(circle, rgba(114, 253, 2, 0.08) 0%, transparent 70%);
     border-radius: 50%;
+
+    @media (max-width: $breakpoint-md) {
+      width: min(250px, 70vw);
+      height: min(250px, 70vw);
+    }
   }
 }
 

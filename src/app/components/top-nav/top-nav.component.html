@@ -32,32 +32,57 @@
         <li class="nav-item" [class.has-dropdown]="hasChildren(item)">
           @if (hasChildren(item)) {
             <div class="dropdown-wrapper">
-              <a
-                class="nav-link dropdown-trigger"
-                [routerLink]="item.route"
-                [class.active]="isActiveRoute(item.route)"
-                (click)="handleDropdownClick(item, $event)"
-                (mouseenter)="activeDropdown.set(item.label)"
-                (mouseleave)="closeDropdown()"
-                [attr.aria-expanded]="activeDropdown() === item.label"
-                aria-haspopup="true"
-              >
-                {{ item.label }}
-                <svg
-                  class="dropdown-arrow"
-                  [class.open]="activeDropdown() === item.label"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div class="dropdown-trigger-wrapper">
+                <a
+                  class="nav-link dropdown-trigger"
+                  [routerLink]="item.route"
+                  [class.active]="isActiveRoute(item.route)"
+                  (click)="handleLinkClick(item, $event)"
+                  (mouseenter)="activeDropdown.set(item.label)"
+                  (mouseleave)="closeDropdown()"
+                  [attr.aria-expanded]="activeDropdown() === item.label"
+                  aria-haspopup="true"
                 >
-                  <path
-                    d="M6 9L1 4H11L6 9Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
+                  {{ item.label }}
+                  <svg
+                    class="dropdown-arrow desktop-arrow"
+                    [class.open]="activeDropdown() === item.label"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L1 4H11L6 9Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </a>
+                <button
+                  class="dropdown-toggle-btn"
+                  type="button"
+                  [class.open]="activeDropdown() === item.label"
+                  (click)="toggleDropdown(item.label, $event)"
+                  aria-label="Toggle dropdown menu"
+                  [attr.aria-expanded]="activeDropdown() === item.label"
+                >
+                  <svg
+                    class="dropdown-arrow mobile-arrow"
+                    [class.open]="activeDropdown() === item.label"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 9L1 4H11L6 9Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
               <ul
                 class="dropdown-menu"
                 [class.show]="activeDropdown() === item.label"
